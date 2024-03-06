@@ -1,0 +1,22 @@
+﻿namespace TestConexion
+{
+    public class LoginModel
+    {
+        public required string UserName { get; set; }
+        public required string Password { get; set; }
+    }
+
+    public class Root
+    {
+        public required string token { get; set; }
+        public required User user { get; set; }
+    }
+
+    public class User
+    {
+        public int id { get; set; }
+        public int rolId { get; set; }
+        public int personId { get; set; }
+        public required string userName { get; set; }
+    }
+}
