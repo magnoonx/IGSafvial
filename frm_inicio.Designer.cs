@@ -28,29 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnLogin = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_inicio));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             txtUsuario = new TextBox();
             txtPassword = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            btnSalir = new Button();
-            SAFVIAL = new Label();
+            pictureBox1 = new PictureBox();
+            btnIniciarSesion = new Guna.UI2.WinForms.Guna2CircleButton();
+            btnSalirSistema = new Guna.UI2.WinForms.Guna2CircleButton();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // btnLogin
-            // 
-            btnLogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(37, 274);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(243, 50);
-            btnLogin.TabIndex = 0;
-            btnLogin.Text = "Iniciar Sesión";
-            btnLogin.UseVisualStyleBackColor = true;
-            btnLogin.Click += btnLogin_Click_1;
             // 
             // txtUsuario
             // 
-            txtUsuario.Location = new Point(37, 155);
+            txtUsuario.Location = new Point(25, 167);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(243, 27);
             txtUsuario.TabIndex = 1;
@@ -58,7 +51,7 @@
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(37, 226);
+            txtPassword.Location = new Point(25, 238);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(243, 27);
@@ -69,7 +62,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(60, 114);
+            label1.Location = new Point(48, 126);
             label1.Name = "label1";
             label1.Size = new Size(197, 38);
             label1.TabIndex = 3;
@@ -79,61 +72,87 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(78, 185);
+            label2.Location = new Point(66, 197);
             label2.Name = "label2";
             label2.Size = new Size(164, 38);
             label2.TabIndex = 4;
             label2.Text = "Contraseña";
             // 
-            // btnSalir
+            // pictureBox1
             // 
-            btnSalir.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnSalir.Location = new Point(37, 330);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(243, 50);
-            btnSalir.TabIndex = 5;
-            btnSalir.Text = "Salir";
-            btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += btnSalir_Click;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(25, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(243, 74);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
-            // SAFVIAL
+            // btnIniciarSesion
             // 
-            SAFVIAL.AutoSize = true;
-            SAFVIAL.Font = new Font("Segoe UI", 25.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            SAFVIAL.Location = new Point(60, 18);
-            SAFVIAL.Name = "SAFVIAL";
-            SAFVIAL.Size = new Size(201, 60);
-            SAFVIAL.TabIndex = 6;
-            SAFVIAL.Text = "SAFVIAL";
+            btnIniciarSesion.DisabledState.BorderColor = Color.DarkGray;
+            btnIniciarSesion.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnIniciarSesion.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnIniciarSesion.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnIniciarSesion.FillColor = Color.Green;
+            btnIniciarSesion.Font = new Font("Segoe UI", 9F);
+            btnIniciarSesion.ForeColor = Color.White;
+            btnIniciarSesion.Location = new Point(25, 279);
+            btnIniciarSesion.Name = "btnIniciarSesion";
+            btnIniciarSesion.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btnIniciarSesion.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnIniciarSesion.Size = new Size(117, 113);
+            btnIniciarSesion.TabIndex = 7;
+            btnIniciarSesion.Text = "Iniciar Sesión";
+            btnIniciarSesion.Click += btnIniciarSesion_Click;
+            // 
+            // btnSalirSistema
+            // 
+            btnSalirSistema.DisabledState.BorderColor = Color.DarkGray;
+            btnSalirSistema.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSalirSistema.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSalirSistema.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSalirSistema.FillColor = Color.DarkOrange;
+            btnSalirSistema.Font = new Font("Segoe UI", 9F);
+            btnSalirSistema.ForeColor = Color.White;
+            btnSalirSistema.Location = new Point(151, 279);
+            btnSalirSistema.Name = "btnSalirSistema";
+            btnSalirSistema.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSalirSistema.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            btnSalirSistema.Size = new Size(117, 113);
+            btnSalirSistema.TabIndex = 8;
+            btnSalirSistema.Text = "Salir";
+            btnSalirSistema.Click += btnSalirSistema_Click;
             // 
             // frm_inicio
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(319, 411);
-            Controls.Add(SAFVIAL);
-            Controls.Add(btnSalir);
+            BackColor = SystemColors.ControlLightLight;
+            ClientSize = new Size(296, 428);
+            Controls.Add(btnSalirSistema);
+            Controls.Add(btnIniciarSesion);
+            Controls.Add(pictureBox1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtPassword);
             Controls.Add(txtUsuario);
-            Controls.Add(btnLogin);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frm_inicio";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button btnLogin;
         private TextBox txtUsuario;
         private TextBox txtPassword;
         private Label label1;
         private Label label2;
-        private Button btnSalir;
-        private Label SAFVIAL;
+        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnIniciarSesion;
+        private Guna.UI2.WinForms.Guna2CircleButton btnSalirSistema;
     }
 }
