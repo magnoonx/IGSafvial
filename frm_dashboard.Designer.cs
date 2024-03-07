@@ -321,10 +321,10 @@
             guna2Panel4.BackColor = SystemColors.ActiveCaption;
             guna2Panel4.CustomizableEdges = customizableEdges3;
             guna2Panel4.Dock = DockStyle.Bottom;
-            guna2Panel4.Location = new Point(222, 850);
+            guna2Panel4.Location = new Point(222, 903);
             guna2Panel4.Name = "guna2Panel4";
             guna2Panel4.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel4.Size = new Size(1011, 76);
+            guna2Panel4.Size = new Size(1011, 23);
             guna2Panel4.TabIndex = 3;
             // 
             // guna2Panel5
@@ -336,7 +336,7 @@
             guna2Panel5.Location = new Point(983, 44);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Panel5.Size = new Size(250, 806);
+            guna2Panel5.Size = new Size(250, 859);
             guna2Panel5.TabIndex = 4;
             // 
             // frm_dashboard
