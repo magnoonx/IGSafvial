@@ -36,18 +36,23 @@
 			Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
 			Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
 			Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+			Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+			Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
 			pictureBox1 = new PictureBox();
 			guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
 			guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
 			guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
 			guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+			guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+			guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
 			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+			guna2Panel1.SuspendLayout();
 			SuspendLayout();
 			// 
 			// pictureBox1
 			// 
 			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(21, 12);
+			pictureBox1.Location = new Point(24, 21);
 			pictureBox1.Name = "pictureBox1";
 			pictureBox1.Size = new Size(226, 64);
 			pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -65,7 +70,7 @@
 			guna2Button1.FillColor = Color.DarkSeaGreen;
 			guna2Button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			guna2Button1.ForeColor = Color.White;
-			guna2Button1.Location = new Point(102, 469);
+			guna2Button1.Location = new Point(102, 482);
 			guna2Button1.Name = "guna2Button1";
 			guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
 			guna2Button1.Size = new Size(302, 56);
@@ -83,7 +88,7 @@
 			guna2ImageButton1.ImageOffset = new Point(0, 0);
 			guna2ImageButton1.ImageRotate = 0F;
 			guna2ImageButton1.ImageSize = new Size(30, 30);
-			guna2ImageButton1.Location = new Point(469, 12);
+			guna2ImageButton1.Location = new Point(469, 21);
 			guna2ImageButton1.Name = "guna2ImageButton1";
 			guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
 			guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges3;
@@ -105,7 +110,7 @@
 			guna2TextBox1.IconLeft = (Image)resources.GetObject("guna2TextBox1.IconLeft");
 			guna2TextBox1.IconLeftOffset = new Point(5, 0);
 			guna2TextBox1.IconLeftSize = new Size(32, 32);
-			guna2TextBox1.Location = new Point(102, 208);
+			guna2TextBox1.Location = new Point(102, 224);
 			guna2TextBox1.Margin = new Padding(5, 6, 5, 6);
 			guna2TextBox1.Name = "guna2TextBox1";
 			guna2TextBox1.PasswordChar = '\0';
@@ -128,7 +133,7 @@
 			guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
 			guna2TextBox2.IconLeft = (Image)resources.GetObject("guna2TextBox2.IconLeft");
 			guna2TextBox2.IconLeftSize = new Size(40, 40);
-			guna2TextBox2.Location = new Point(102, 325);
+			guna2TextBox2.Location = new Point(102, 344);
 			guna2TextBox2.Margin = new Padding(5, 6, 5, 6);
 			guna2TextBox2.Name = "guna2TextBox2";
 			guna2TextBox2.PasswordChar = '*';
@@ -138,13 +143,36 @@
 			guna2TextBox2.Size = new Size(302, 54);
 			guna2TextBox2.TabIndex = 12;
 			// 
+			// guna2HtmlLabel1
+			// 
+			guna2HtmlLabel1.BackColor = Color.Transparent;
+			guna2HtmlLabel1.Font = new Font("Segoe UI", 7F, FontStyle.Bold);
+			guna2HtmlLabel1.ForeColor = Color.DarkCyan;
+			guna2HtmlLabel1.Location = new Point(184, 8);
+			guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+			guna2HtmlLabel1.Size = new Size(136, 17);
+			guna2HtmlLabel1.TabIndex = 13;
+			guna2HtmlLabel1.Text = "© Arccorp Express 2024";
+			// 
+			// guna2Panel1
+			// 
+			guna2Panel1.BackColor = Color.Gainsboro;
+			guna2Panel1.Controls.Add(guna2HtmlLabel1);
+			guna2Panel1.CustomizableEdges = customizableEdges8;
+			guna2Panel1.Location = new Point(0, 571);
+			guna2Panel1.Name = "guna2Panel1";
+			guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges9;
+			guna2Panel1.Size = new Size(511, 33);
+			guna2Panel1.TabIndex = 14;
+			// 
 			// frm_inicio
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = Color.Snow;
 			BackgroundImageLayout = ImageLayout.Center;
-			ClientSize = new Size(510, 618);
+			ClientSize = new Size(510, 600);
+			Controls.Add(guna2Panel1);
 			Controls.Add(guna2TextBox2);
 			Controls.Add(guna2TextBox1);
 			Controls.Add(guna2ImageButton1);
@@ -153,10 +181,13 @@
 			DoubleBuffered = true;
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "frm_inicio";
+			Opacity = 0.98D;
 			StartPosition = FormStartPosition.CenterScreen;
 			Text = "Form1";
 			Load += Form1_Load;
 			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+			guna2Panel1.ResumeLayout(false);
+			guna2Panel1.PerformLayout();
 			ResumeLayout(false);
 		}
 
@@ -166,5 +197,7 @@
 		private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
 		private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
 		private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+		private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+		private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
 	}
 }
