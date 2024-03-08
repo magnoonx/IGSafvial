@@ -19,7 +19,12 @@ namespace IGSafvial
 
         private void btnSalirCanal_Click(object sender, EventArgs e)
         {
-            Application.Exit(); 
+            Application.Exit();
+        }
+
+        private void btnSalirCanal_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
