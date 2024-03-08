@@ -65,12 +65,12 @@
 			guna2Button1.FillColor = Color.DarkSeaGreen;
 			guna2Button1.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			guna2Button1.ForeColor = Color.White;
-			guna2Button1.Location = new Point(102, 466);
+			guna2Button1.Location = new Point(102, 469);
 			guna2Button1.Name = "guna2Button1";
 			guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-			guna2Button1.Size = new Size(291, 56);
+			guna2Button1.Size = new Size(302, 56);
 			guna2Button1.TabIndex = 9;
-			guna2Button1.Text = "Incio de sesión";
+			guna2Button1.Text = "Inicio de sesión";
 			guna2Button1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
 			guna2Button1.Tile = true;
 			guna2Button1.Click += guna2Button1_Click;
@@ -103,8 +103,9 @@
 			guna2TextBox1.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
 			guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
 			guna2TextBox1.IconLeft = (Image)resources.GetObject("guna2TextBox1.IconLeft");
-			guna2TextBox1.IconLeftSize = new Size(50, 50);
-			guna2TextBox1.Location = new Point(102, 167);
+			guna2TextBox1.IconLeftOffset = new Point(5, 0);
+			guna2TextBox1.IconLeftSize = new Size(32, 32);
+			guna2TextBox1.Location = new Point(102, 208);
 			guna2TextBox1.Margin = new Padding(5, 6, 5, 6);
 			guna2TextBox1.Name = "guna2TextBox1";
 			guna2TextBox1.PasswordChar = '\0';
@@ -127,7 +128,7 @@
 			guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
 			guna2TextBox2.IconLeft = (Image)resources.GetObject("guna2TextBox2.IconLeft");
 			guna2TextBox2.IconLeftSize = new Size(40, 40);
-			guna2TextBox2.Location = new Point(102, 292);
+			guna2TextBox2.Location = new Point(102, 325);
 			guna2TextBox2.Margin = new Padding(5, 6, 5, 6);
 			guna2TextBox2.Name = "guna2TextBox2";
 			guna2TextBox2.PasswordChar = '*';
@@ -141,13 +142,15 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			BackColor = Color.White;
-			ClientSize = new Size(510, 560);
+			BackColor = Color.Snow;
+			BackgroundImageLayout = ImageLayout.Center;
+			ClientSize = new Size(510, 618);
 			Controls.Add(guna2TextBox2);
 			Controls.Add(guna2TextBox1);
 			Controls.Add(guna2ImageButton1);
 			Controls.Add(guna2Button1);
 			Controls.Add(pictureBox1);
+			DoubleBuffered = true;
 			FormBorderStyle = FormBorderStyle.None;
 			Name = "frm_inicio";
 			StartPosition = FormStartPosition.CenterScreen;
