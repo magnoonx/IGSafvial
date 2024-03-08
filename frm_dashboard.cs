@@ -16,5 +16,10 @@ namespace IGSafvial
         {
             InitializeComponent();
         }
+
+        private void btnSalirCanal_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); 
+        }
     }
 }
