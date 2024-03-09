@@ -11,7 +11,7 @@ public static class APIHelper
         {
             using (var client = new HttpClient())
             {
-                var url = "http://192.168.2.13:5000/api/User/Login/";
+                var url = "https://localhost/api/User/Login/";
                 var data = new { usuario = usuario, password = password };
                 var loginmodel = new LoginModel
 
