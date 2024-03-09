@@ -39,7 +39,7 @@ namespace TestConexion
 			if (respuesta.success)
 			{
 				// Abrir el formulario de dashboard
-				var dashboard = new frm_dashboard();
+				var dashboard = new Form1();
 				dashboard.Show();
 				this.Hide();
 			}
@@ -65,7 +65,7 @@ namespace TestConexion
 			if (respuesta.success)
 			{
 				// Abrir el formulario de dashboard
-				var dashboard = new frm_dashboard();
+				var dashboard = new Form1();
 				dashboard.Show();
 				this.Hide();
 			}
@@ -98,7 +98,7 @@ namespace TestConexion
 			if (respuesta.success)
 			{
 				// Abrir el formulario de dashboard
-				var dashboard = new frm_dashboard();
+				var dashboard = new Form1();
 				dashboard.Show();
 				this.Hide();
 			}
