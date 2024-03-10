@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace IGSafvial
 {
@@ -31,6 +32,40 @@ namespace IGSafvial
 		private void guna2GradientButton4_Click(object sender, EventArgs e)
 		{
 
+		}
+
+		private void guna2ImageButton2_Click(object sender, EventArgs e)
+		{
+			var result = MessageBox.Show("Se cerrara la sesión y aplicacion ¿Desea Continuar?", "ARCORP EXPRESS", MessageBoxButtons.YesNo);
+			if (result == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
+		}
+
+		private void guna2ImageButton3_Click(object sender, EventArgs e)
+		{
+			if (WindowState == FormWindowState.Normal)
+			{
+				this.WindowState = FormWindowState.Maximized;
+			}
+			else
+			{
+				this.WindowState = FormWindowState.Normal;
+			}
+			//cambiar el boton
+		}
+
+		private void guna2ImageButton4_Click(object sender, EventArgs e)
+		{
+			if (WindowState == FormWindowState.Normal || WindowState == FormWindowState.Maximized)
+			{
+				this.WindowState = FormWindowState.Minimized;
+			}
+			else
+			{
+				this.WindowState = FormWindowState.Normal;
+			}
 		}
 	}
 }

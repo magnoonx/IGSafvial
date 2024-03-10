@@ -51,7 +51,11 @@ namespace TestConexion
 
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
-			Application.Exit();
+			var result = MessageBox.Show("Se cerrara la sesión y aplicacion ¿Desea Continuar?", "SAFVIAL", MessageBoxButtons.YesNo);
+			if (result == DialogResult.Yes)
+			{
+				Application.Exit();
+			}
 		}
 
 		private async void btnIniciarSesion_Click(object sender, EventArgs e)

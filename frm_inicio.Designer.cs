@@ -119,6 +119,7 @@
 			guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges5;
 			guna2TextBox1.Size = new Size(302, 54);
 			guna2TextBox1.TabIndex = 11;
+			guna2TextBox1.TextOffset = new Point(5, 0);
 			// 
 			// guna2TextBox2
 			// 
@@ -142,6 +143,7 @@
 			guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges7;
 			guna2TextBox2.Size = new Size(302, 54);
 			guna2TextBox2.TabIndex = 12;
+			guna2TextBox2.TextOffset = new Point(5, 0);
 			// 
 			// guna2HtmlLabel1
 			// 
