@@ -67,5 +67,21 @@ namespace IGSafvial
 				this.WindowState = FormWindowState.Normal;
 			}
 		}
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			this.guna2TextBox6.Text = DateTime.Now.ToShortDateString();
+			this.guna2TextBox7.Text = DateTime.Now.ToLongTimeString();
+		}
+
+		private void guna2TextBox6_TextChanged(object sender, EventArgs e)
+		{
+			this.guna2TextBox6.Text = DateTime.Now.ToShortDateString();
+		}
+
+		private void guna2TextBox7_TextChanged(object sender, EventArgs e)
+		{
+			this.guna2TextBox7.Text = DateTime.Now.ToLongTimeString();
+		}
 	}
 }

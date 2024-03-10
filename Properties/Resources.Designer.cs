@@ -143,6 +143,16 @@ namespace IGSafvial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap autorizarAvance {
+            get {
+                object obj = ResourceManager.GetObject("autorizarAvance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bus {
             get {
                 object obj = ResourceManager.GetObject("Bus", resourceCulture);
@@ -193,6 +203,36 @@ namespace IGSafvial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap estacionamiento {
+            get {
+                object obj = ResourceManager.GetObject("estacionamiento", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estacionamiento1 {
+            get {
+                object obj = ResourceManager.GetObject("estacionamiento1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap estacionamiento2 {
+            get {
+                object obj = ResourceManager.GetObject("estacionamiento2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap focus_4610259 {
             get {
                 object obj = ResourceManager.GetObject("focus_4610259", resourceCulture);
@@ -226,6 +266,36 @@ namespace IGSafvial.Properties {
         internal static System.Drawing.Bitmap picture_8466834 {
             get {
                 object obj = ResourceManager.GetObject("picture_8466834", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap recibo {
+            get {
+                object obj = ResourceManager.GetObject("recibo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap solicitarAvance {
+            get {
+                object obj = ResourceManager.GetObject("solicitarAvance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tarjeta {
+            get {
+                object obj = ResourceManager.GetObject("tarjeta", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
