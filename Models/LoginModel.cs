@@ -1,4 +1,4 @@
-﻿namespace TestConexion
+﻿namespace ArcorpExpress.Models
 {
     public class LoginModel
     {

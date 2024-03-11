@@ -1,4 +1,4 @@
-﻿namespace IGSafvial
+﻿namespace ArcorpExpress
 {
 	partial class frm_dashboard
 	{

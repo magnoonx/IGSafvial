@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IGSafvial
+namespace ArcorpExpress
 {
     public partial class frm_dashboard : Form
     {
