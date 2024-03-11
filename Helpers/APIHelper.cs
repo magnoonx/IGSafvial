@@ -8,11 +8,17 @@ public static class APIHelper
 {
     public static async Task<Respuesta> Login(string usuario, string password)
     {
+        string currentDirectory = Directory.GetCurrentDirectory();
+        string fileName = "Config/config.txt";
+        string filePath = Path.Combine(currentDirectory, fileName);
+        string url = File.ReadAllText(filePath);
         try
         {
             using (var client = new HttpClient())
             {
-                var url = "http://192.168.2.13:5000/api/User/Login/";
+                // var url = "http://192.168.2.13:5000/api/User/Login/";
+                
+               
                 var data = new { usuario = usuario, password = password };
                 var loginmodel = new LoginModel
 
