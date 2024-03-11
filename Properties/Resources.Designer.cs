@@ -133,6 +133,16 @@ namespace ArcorpExpress.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap autoBus1 {
+            get {
+                object obj = ResourceManager.GetObject("autoBus1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Automobile {
             get {
                 object obj = ResourceManager.GetObject("Automobile", resourceCulture);
