@@ -494,7 +494,6 @@
 			guna2Button1.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			guna2Button1.ForeColor = Color.White;
 			guna2Button1.Image = Properties.Resources.tarjeta;
-			guna2Button1.ImageOffset = new Point(25, -15);
 			guna2Button1.ImageSize = new Size(65, 65);
 			guna2Button1.Location = new Point(3, 3);
 			guna2Button1.Name = "guna2Button1";
@@ -502,7 +501,7 @@
 			guna2Button1.Size = new Size(119, 157);
 			guna2Button1.TabIndex = 0;
 			guna2Button1.Text = "Venta express";
-			guna2Button1.TextOffset = new Point(-15, 45);
+			guna2Button1.Tile = true;
 			// 
 			// guna2Button2
 			// 
@@ -519,15 +518,15 @@
 			guna2Button2.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			guna2Button2.ForeColor = Color.White;
 			guna2Button2.Image = Properties.Resources.Automobile;
-			guna2Button2.ImageOffset = new Point(15, -25);
 			guna2Button2.ImageSize = new Size(80, 80);
+			guna2Button2.ImeMode = ImeMode.NoControl;
 			guna2Button2.Location = new Point(128, 3);
 			guna2Button2.Name = "guna2Button2";
 			guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges26;
 			guna2Button2.Size = new Size(119, 157);
 			guna2Button2.TabIndex = 1;
 			guna2Button2.Text = "Liviano";
-			guna2Button2.TextOffset = new Point(-20, 30);
+			guna2Button2.Tile = true;
 			// 
 			// guna2Button3
 			// 
@@ -909,7 +908,7 @@
 			guna2HtmlLabel1.ForeColor = Color.DarkCyan;
 			guna2HtmlLabel1.Location = new Point(446, 8);
 			guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-			guna2HtmlLabel1.Size = new Size(137, 17);
+			guna2HtmlLabel1.Size = new Size(172, 22);
 			guna2HtmlLabel1.TabIndex = 0;
 			guna2HtmlLabel1.Text = "© Arcorp Express 2024";
 			// 
