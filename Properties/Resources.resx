@@ -118,20 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="estacionamiento2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\estacionamiento2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Identification Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\Identification Card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Automobile" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\Automobile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="autorizarAvance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\autorizarAvance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="solicitarAvance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\solicitarAvance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\Bus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="750" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\750.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,23 +130,20 @@
   <data name="Delivery Truck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\Delivery Truck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="picture_8466834" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\picture_8466834.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="focus_4610259" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\focus_4610259.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="autorizarAvance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\autorizarAvance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="recibo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\recibo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="estacionamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\estacionamiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="autoBus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\autoBus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="estacionamiento1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\estacionamiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="contacts-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\contacts-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Articulated5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\Articulated5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Articulated3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\Articulated3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,34 +151,58 @@
   <data name="7501" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\750.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cerrar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\cerrar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Articulated4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\Articulated4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Automobile" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\Automobile.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tarjeta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\tarjeta.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="picture_8466834" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\picture_8466834.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Identification Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\Identification Card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Articulated4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\Articulated4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Articulated6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\Articulated6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="estacionamiento" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\estacionamiento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Articulated5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\Articulated5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="maximize-window-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\maximize-window-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="autoBus" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Iconos\autoBus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="arcorpIsotipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\arcorpIsotipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="estacionamiento2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\estacionamiento2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cuota" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\cuota.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="recibo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\recibo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotipo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\logotipo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="autoBus1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Iconos\autoBus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="solicitarAvance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\solicitarAvance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logotipo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\logotipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="focus_4610259" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\focus_4610259.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Bus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\Bus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Articulated6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\Articulated6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="contacts-64" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\contacts-64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="arcorpIsotipo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Iconos\arcorpIsotipo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

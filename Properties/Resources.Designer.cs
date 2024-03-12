@@ -83,6 +83,26 @@ namespace ArcorpExpress.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arcorpIsotipo {
+            get {
+                object obj = ResourceManager.GetObject("arcorpIsotipo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap arcorpIsotipo1 {
+            get {
+                object obj = ResourceManager.GetObject("arcorpIsotipo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Articulated3 {
             get {
                 object obj = ResourceManager.GetObject("Articulated3", resourceCulture);
@@ -256,6 +276,26 @@ namespace ArcorpExpress.Properties {
         internal static System.Drawing.Bitmap Identification_Card {
             get {
                 object obj = ResourceManager.GetObject("Identification Card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotipo {
+            get {
+                object obj = ResourceManager.GetObject("logotipo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logotipo1 {
+            get {
+                object obj = ResourceManager.GetObject("logotipo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
