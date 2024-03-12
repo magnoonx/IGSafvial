@@ -569,7 +569,6 @@
 			guna2Button4.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			guna2Button4.ForeColor = Color.White;
 			guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-			guna2Button4.ImageOffset = new Point(15, -20);
 			guna2Button4.ImageSize = new Size(95, 70);
 			guna2Button4.Location = new Point(378, 3);
 			guna2Button4.Name = "guna2Button4";
@@ -577,7 +576,7 @@
 			guna2Button4.Size = new Size(119, 157);
 			guna2Button4.TabIndex = 6;
 			guna2Button4.Text = "Autobus";
-			guna2Button4.TextOffset = new Point(-22, 30);
+			guna2Button4.Tile = true;
 			// 
 			// guna2Button5
 			// 
@@ -594,7 +593,6 @@
 			guna2Button5.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold, GraphicsUnit.Point, 0);
 			guna2Button5.ForeColor = Color.White;
 			guna2Button5.Image = (Image)resources.GetObject("guna2Button5.Image");
-			guna2Button5.ImageOffset = new Point(25, -15);
 			guna2Button5.ImageSize = new Size(90, 65);
 			guna2Button5.Location = new Point(503, 3);
 			guna2Button5.Name = "guna2Button5";
@@ -602,7 +600,7 @@
 			guna2Button5.Size = new Size(119, 157);
 			guna2Button5.TabIndex = 7;
 			guna2Button5.Text = "Camión 350";
-			guna2Button5.TextOffset = new Point(-25, 35);
+			guna2Button5.Tile = true;
 			// 
 			// guna2Button6
 			// 
