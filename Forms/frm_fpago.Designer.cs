@@ -59,8 +59,8 @@
             guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
-            label2 = new Label();
             label3 = new Label();
+            label2 = new Label();
             guna2Panel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -226,7 +226,7 @@
             guna2Panel5.Margin = new Padding(3, 2, 3, 2);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel5.Size = new Size(332, 19);
+            guna2Panel5.Size = new Size(330, 19);
             guna2Panel5.TabIndex = 8;
             // 
             // guna2HtmlLabel1
@@ -312,8 +312,8 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.ColumnCount = 2;
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 64.81481F));
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35.1851845F));
             tableLayoutPanel2.Controls.Add(label3, 0, 1);
             tableLayoutPanel2.Controls.Add(label2, 0, 0);
             tableLayoutPanel2.Location = new Point(3, 61);
@@ -324,18 +324,6 @@
             tableLayoutPanel2.Size = new Size(324, 100);
             tableLayoutPanel2.TabIndex = 13;
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(156, 50);
-            label2.TabIndex = 13;
-            label2.Text = "Tipo de Vehículo:";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -343,16 +331,28 @@
             label3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(3, 50);
             label3.Name = "label3";
-            label3.Size = new Size(156, 50);
+            label3.Size = new Size(203, 50);
             label3.TabIndex = 14;
             label3.Text = "Monto a pagar:";
             label3.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Dock = DockStyle.Fill;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(203, 50);
+            label2.TabIndex = 13;
+            label2.Text = "Tipo de Vehículo:";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frm_fpago
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(332, 714);
+            ClientSize = new Size(330, 714);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(guna2Button6);
