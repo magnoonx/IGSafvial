@@ -187,6 +187,9 @@
 			guna2Panel2.ShadowDecoration.CustomizableEdges = customizableEdges8;
 			guna2Panel2.Size = new Size(1024, 73);
 			guna2Panel2.TabIndex = 1;
+			guna2Panel2.MouseDown += guna2Panel2_MouseDown_1;
+			guna2Panel2.MouseMove += guna2Panel2_MouseMove_1;
+			guna2Panel2.MouseUp += guna2Panel2_MouseUp_1;
 			// 
 			// guna2ImageButton4
 			// 

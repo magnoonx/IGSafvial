@@ -13,6 +13,10 @@ namespace ArcorpExpress
 {
 	public partial class frm_dashboard : Form
 	{
+		private bool _dragging = false;
+		private Point _offset;
+		private Point _start_point = new Point();
+
 		public frm_dashboard()
 		{
 			InitializeComponent();
@@ -82,6 +86,26 @@ namespace ArcorpExpress
 		private void guna2TextBox7_TextChanged(object sender, EventArgs e)
 		{
 			this.guna2TextBox7.Text = DateTime.Now.ToLongTimeString();
+		}
+
+		private void guna2Panel2_MouseDown_1(object sender, MouseEventArgs e)
+		{
+			_dragging = true;
+			_start_point = new Point(e.X, e.Y);
+		}
+
+		private void guna2Panel2_MouseMove_1(object sender, MouseEventArgs e)
+		{
+			if (_dragging)
+			{
+				Point p = PointToScreen(e.Location);
+				Location = new Point(p.X - this._start_point.X, p.Y - this._start_point.Y);
+			}
+		}
+
+		private void guna2Panel2_MouseUp_1(object sender, MouseEventArgs e)
+		{
+			_dragging = false;
 		}
 	}
 }
