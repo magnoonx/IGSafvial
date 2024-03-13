@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna2Button11.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Exonerado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAABhRJREFUeF7t
         nY2RHDUQhS8EQiAEMoAMIAPIwGQAGUAGOAOTAWRgZ2AygAxAz1hl1VP3qEevZ0db1lf1qu52u9/opNXf
@@ -150,7 +150,7 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Efectivo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAABh9JREFUeF7t
         nI2x5DQQhF8IhEAIZAAZQAaQAWQAGUAGXAaQAWQAGUAGkAH4u2L2+g2SLMm2dveuv6quemtrbXlaPyN5
@@ -182,7 +182,7 @@
         vXBTpOJINMcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_POS.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAA+xJREFUeF7t
         nNGtE0EMRV8JlEAJlEAJdAClUAIdQAmUQAdQAh1ABzD+iBRdHeQZZuI4jo90pGiNtXfX2WQZ7cvLjXg/
@@ -204,7 +204,7 @@
         h6PfDJ8aG0qGK8WujKcfxjX2ROCXoZ0YOmG30m4ukj2N+PLyFw5Lz1Rlp7rBAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="guna2Button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Prepagado.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAA0VJREFUeF7t
         nIFx1DAQRa8ESqAEOoAS6IB0AB1AB5QAHUAHoQPoADqADkA/k73ZUVaWZVt3S/LezJ9Mbm3fav+drfNq
@@ -224,7 +224,7 @@
         AABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Incompleto.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAABXpJREFUeF7t
         nLGOHTUUhjcSoggNTRoqniCip4A3IBUtKFK6CJCoEYgiLanSpAhISJSkQUqXtKlAoqOBN4AnAM4Ha8ly
@@ -253,7 +253,7 @@
         HRnWAE1aAFpzAgOurv4FCtHWb+kPgaMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="guna2Button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Transferencia.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAABBFJREFUeF7t
         nI2xk0AUhV8JlmAJdqAdaAfagXagHfg60A60A+1AO9AOtAPdwwQGzl52Wbi7EDjfzJnJhBsu2S+B8JeH
@@ -644,7 +644,7 @@
         /x8HhNNht5vCvQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna2Button6.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Salir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAACG1JREFUeF7t
         nb9uJEUQxu8Nzm9gPwHnB0A6xyR2Rmi/AbzBWSSQ2SIhAOmckGK/gZ2RcUiEIBkSEgIjIRGy9G+1vZqe

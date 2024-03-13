@@ -46,175 +46,177 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            guna2Button11 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Exonerado = new Guna.UI2.WinForms.Guna2Button();
+            btn_Efectivo = new Guna.UI2.WinForms.Guna2Button();
+            btn_POS = new Guna.UI2.WinForms.Guna2Button();
+            btn_Prepagado = new Guna.UI2.WinForms.Guna2Button();
+            btn_Incompleto = new Guna.UI2.WinForms.Guna2Button();
+            btn_Transferencia = new Guna.UI2.WinForms.Guna2Button();
             guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             label1 = new Label();
-            guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            btn_Salir = new Guna.UI2.WinForms.Guna2Button();
             tableLayoutPanel1 = new TableLayoutPanel();
             tableLayoutPanel2 = new TableLayoutPanel();
             label3 = new Label();
             label2 = new Label();
+            lbl_Monto = new Label();
+            lbl_Tipo = new Label();
             guna2Panel5.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             SuspendLayout();
             // 
-            // guna2Button11
+            // btn_Exonerado
             // 
-            guna2Button11.BorderColor = Color.Tomato;
-            guna2Button11.BorderRadius = 15;
-            guna2Button11.BorderThickness = 3;
-            guna2Button11.CustomizableEdges = customizableEdges1;
-            guna2Button11.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button11.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button11.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button11.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button11.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button11.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button11.ForeColor = Color.White;
-            guna2Button11.Image = (Image)resources.GetObject("guna2Button11.Image");
-            guna2Button11.ImageAlign = HorizontalAlignment.Left;
-            guna2Button11.ImageOffset = new Point(20, 0);
-            guna2Button11.ImageSize = new Size(40, 40);
-            guna2Button11.Location = new Point(1, 181);
-            guna2Button11.Margin = new Padding(3, 2, 3, 2);
-            guna2Button11.Name = "guna2Button11";
-            guna2Button11.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2Button11.Size = new Size(326, 69);
-            guna2Button11.TabIndex = 1;
-            guna2Button11.Text = "EXONERADO";
+            btn_Exonerado.BorderColor = Color.Tomato;
+            btn_Exonerado.BorderRadius = 15;
+            btn_Exonerado.BorderThickness = 3;
+            btn_Exonerado.CustomizableEdges = customizableEdges1;
+            btn_Exonerado.DisabledState.BorderColor = Color.DarkGray;
+            btn_Exonerado.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Exonerado.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Exonerado.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Exonerado.FillColor = Color.FromArgb(255, 192, 128);
+            btn_Exonerado.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Exonerado.ForeColor = Color.White;
+            btn_Exonerado.Image = (Image)resources.GetObject("btn_Exonerado.Image");
+            btn_Exonerado.ImageAlign = HorizontalAlignment.Left;
+            btn_Exonerado.ImageOffset = new Point(20, 0);
+            btn_Exonerado.ImageSize = new Size(40, 40);
+            btn_Exonerado.Location = new Point(1, 181);
+            btn_Exonerado.Margin = new Padding(3, 2, 3, 2);
+            btn_Exonerado.Name = "btn_Exonerado";
+            btn_Exonerado.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_Exonerado.Size = new Size(326, 69);
+            btn_Exonerado.TabIndex = 1;
+            btn_Exonerado.Text = "EXONERADO";
             // 
-            // guna2Button1
+            // btn_Efectivo
             // 
-            guna2Button1.BorderColor = Color.Tomato;
-            guna2Button1.BorderRadius = 15;
-            guna2Button1.BorderThickness = 3;
-            guna2Button1.CustomizableEdges = customizableEdges3;
-            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button1.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button1.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button1.ForeColor = Color.White;
-            guna2Button1.Image = (Image)resources.GetObject("guna2Button1.Image");
-            guna2Button1.ImageAlign = HorizontalAlignment.Left;
-            guna2Button1.ImageOffset = new Point(25, 0);
-            guna2Button1.ImageSize = new Size(40, 40);
-            guna2Button1.Location = new Point(1, 254);
-            guna2Button1.Margin = new Padding(3, 2, 3, 2);
-            guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Button1.Size = new Size(326, 69);
-            guna2Button1.TabIndex = 2;
-            guna2Button1.Text = "EFECTIVO";
+            btn_Efectivo.BorderColor = Color.Tomato;
+            btn_Efectivo.BorderRadius = 15;
+            btn_Efectivo.BorderThickness = 3;
+            btn_Efectivo.CustomizableEdges = customizableEdges3;
+            btn_Efectivo.DisabledState.BorderColor = Color.DarkGray;
+            btn_Efectivo.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Efectivo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Efectivo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Efectivo.FillColor = Color.FromArgb(255, 192, 128);
+            btn_Efectivo.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Efectivo.ForeColor = Color.White;
+            btn_Efectivo.Image = (Image)resources.GetObject("btn_Efectivo.Image");
+            btn_Efectivo.ImageAlign = HorizontalAlignment.Left;
+            btn_Efectivo.ImageOffset = new Point(25, 0);
+            btn_Efectivo.ImageSize = new Size(40, 40);
+            btn_Efectivo.Location = new Point(1, 254);
+            btn_Efectivo.Margin = new Padding(3, 2, 3, 2);
+            btn_Efectivo.Name = "btn_Efectivo";
+            btn_Efectivo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_Efectivo.Size = new Size(326, 69);
+            btn_Efectivo.TabIndex = 2;
+            btn_Efectivo.Text = "EFECTIVO";
             // 
-            // guna2Button2
+            // btn_POS
             // 
-            guna2Button2.BorderColor = Color.Tomato;
-            guna2Button2.BorderRadius = 15;
-            guna2Button2.BorderThickness = 3;
-            guna2Button2.CustomizableEdges = customizableEdges5;
-            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button2.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button2.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button2.ForeColor = Color.White;
-            guna2Button2.Image = (Image)resources.GetObject("guna2Button2.Image");
-            guna2Button2.ImageAlign = HorizontalAlignment.Left;
-            guna2Button2.ImageOffset = new Point(25, 0);
-            guna2Button2.ImageSize = new Size(40, 40);
-            guna2Button2.Location = new Point(1, 328);
-            guna2Button2.Margin = new Padding(3, 2, 3, 2);
-            guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2Button2.Size = new Size(326, 69);
-            guna2Button2.TabIndex = 3;
-            guna2Button2.Text = "PUNTO DE VENTA";
+            btn_POS.BorderColor = Color.Tomato;
+            btn_POS.BorderRadius = 15;
+            btn_POS.BorderThickness = 3;
+            btn_POS.CustomizableEdges = customizableEdges5;
+            btn_POS.DisabledState.BorderColor = Color.DarkGray;
+            btn_POS.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_POS.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_POS.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_POS.FillColor = Color.FromArgb(255, 192, 128);
+            btn_POS.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_POS.ForeColor = Color.White;
+            btn_POS.Image = (Image)resources.GetObject("btn_POS.Image");
+            btn_POS.ImageAlign = HorizontalAlignment.Left;
+            btn_POS.ImageOffset = new Point(25, 0);
+            btn_POS.ImageSize = new Size(40, 40);
+            btn_POS.Location = new Point(1, 328);
+            btn_POS.Margin = new Padding(3, 2, 3, 2);
+            btn_POS.Name = "btn_POS";
+            btn_POS.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_POS.Size = new Size(326, 69);
+            btn_POS.TabIndex = 3;
+            btn_POS.Text = "PUNTO DE VENTA";
             // 
-            // guna2Button3
+            // btn_Prepagado
             // 
-            guna2Button3.BorderColor = Color.Tomato;
-            guna2Button3.BorderRadius = 15;
-            guna2Button3.BorderThickness = 3;
-            guna2Button3.CustomizableEdges = customizableEdges7;
-            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button3.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button3.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button3.ForeColor = Color.White;
-            guna2Button3.Image = (Image)resources.GetObject("guna2Button3.Image");
-            guna2Button3.ImageAlign = HorizontalAlignment.Left;
-            guna2Button3.ImageOffset = new Point(25, 0);
-            guna2Button3.ImageSize = new Size(40, 40);
-            guna2Button3.Location = new Point(1, 401);
-            guna2Button3.Margin = new Padding(3, 2, 3, 2);
-            guna2Button3.Name = "guna2Button3";
-            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2Button3.Size = new Size(326, 69);
-            guna2Button3.TabIndex = 4;
-            guna2Button3.Text = "SALDO PREPAGADO";
+            btn_Prepagado.BorderColor = Color.Tomato;
+            btn_Prepagado.BorderRadius = 15;
+            btn_Prepagado.BorderThickness = 3;
+            btn_Prepagado.CustomizableEdges = customizableEdges7;
+            btn_Prepagado.DisabledState.BorderColor = Color.DarkGray;
+            btn_Prepagado.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Prepagado.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Prepagado.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Prepagado.FillColor = Color.FromArgb(255, 192, 128);
+            btn_Prepagado.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Prepagado.ForeColor = Color.White;
+            btn_Prepagado.Image = (Image)resources.GetObject("btn_Prepagado.Image");
+            btn_Prepagado.ImageAlign = HorizontalAlignment.Left;
+            btn_Prepagado.ImageOffset = new Point(25, 0);
+            btn_Prepagado.ImageSize = new Size(40, 40);
+            btn_Prepagado.Location = new Point(1, 401);
+            btn_Prepagado.Margin = new Padding(3, 2, 3, 2);
+            btn_Prepagado.Name = "btn_Prepagado";
+            btn_Prepagado.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_Prepagado.Size = new Size(326, 69);
+            btn_Prepagado.TabIndex = 4;
+            btn_Prepagado.Text = "SALDO PREPAGADO";
             // 
-            // guna2Button4
+            // btn_Incompleto
             // 
-            guna2Button4.BorderColor = Color.Tomato;
-            guna2Button4.BorderRadius = 15;
-            guna2Button4.BorderThickness = 3;
-            guna2Button4.CustomizableEdges = customizableEdges9;
-            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button4.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button4.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button4.ForeColor = Color.White;
-            guna2Button4.Image = (Image)resources.GetObject("guna2Button4.Image");
-            guna2Button4.ImageAlign = HorizontalAlignment.Left;
-            guna2Button4.ImageOffset = new Point(25, 0);
-            guna2Button4.ImageSize = new Size(40, 40);
-            guna2Button4.Location = new Point(1, 475);
-            guna2Button4.Margin = new Padding(3, 2, 3, 2);
-            guna2Button4.Name = "guna2Button4";
-            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2Button4.Size = new Size(326, 69);
-            guna2Button4.TabIndex = 5;
-            guna2Button4.Text = "PAGO INCOMPLETO";
+            btn_Incompleto.BorderColor = Color.Tomato;
+            btn_Incompleto.BorderRadius = 15;
+            btn_Incompleto.BorderThickness = 3;
+            btn_Incompleto.CustomizableEdges = customizableEdges9;
+            btn_Incompleto.DisabledState.BorderColor = Color.DarkGray;
+            btn_Incompleto.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Incompleto.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Incompleto.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Incompleto.FillColor = Color.FromArgb(255, 192, 128);
+            btn_Incompleto.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Incompleto.ForeColor = Color.White;
+            btn_Incompleto.Image = (Image)resources.GetObject("btn_Incompleto.Image");
+            btn_Incompleto.ImageAlign = HorizontalAlignment.Left;
+            btn_Incompleto.ImageOffset = new Point(25, 0);
+            btn_Incompleto.ImageSize = new Size(40, 40);
+            btn_Incompleto.Location = new Point(1, 475);
+            btn_Incompleto.Margin = new Padding(3, 2, 3, 2);
+            btn_Incompleto.Name = "btn_Incompleto";
+            btn_Incompleto.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_Incompleto.Size = new Size(326, 69);
+            btn_Incompleto.TabIndex = 5;
+            btn_Incompleto.Text = "PAGO INCOMPLETO";
             // 
-            // guna2Button5
+            // btn_Transferencia
             // 
-            guna2Button5.BorderColor = Color.Tomato;
-            guna2Button5.BorderRadius = 15;
-            guna2Button5.BorderThickness = 3;
-            guna2Button5.CustomizableEdges = customizableEdges11;
-            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button5.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button5.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button5.ForeColor = Color.White;
-            guna2Button5.Image = (Image)resources.GetObject("guna2Button5.Image");
-            guna2Button5.ImageAlign = HorizontalAlignment.Left;
-            guna2Button5.ImageOffset = new Point(25, 0);
-            guna2Button5.ImageSize = new Size(40, 40);
-            guna2Button5.Location = new Point(1, 548);
-            guna2Button5.Margin = new Padding(3, 2, 3, 2);
-            guna2Button5.Name = "guna2Button5";
-            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2Button5.Size = new Size(326, 69);
-            guna2Button5.TabIndex = 6;
-            guna2Button5.Text = "TRANSFERENCIA";
+            btn_Transferencia.BorderColor = Color.Tomato;
+            btn_Transferencia.BorderRadius = 15;
+            btn_Transferencia.BorderThickness = 3;
+            btn_Transferencia.CustomizableEdges = customizableEdges11;
+            btn_Transferencia.DisabledState.BorderColor = Color.DarkGray;
+            btn_Transferencia.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Transferencia.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Transferencia.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Transferencia.FillColor = Color.FromArgb(255, 192, 128);
+            btn_Transferencia.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Transferencia.ForeColor = Color.White;
+            btn_Transferencia.Image = (Image)resources.GetObject("btn_Transferencia.Image");
+            btn_Transferencia.ImageAlign = HorizontalAlignment.Left;
+            btn_Transferencia.ImageOffset = new Point(25, 0);
+            btn_Transferencia.ImageSize = new Size(40, 40);
+            btn_Transferencia.Location = new Point(1, 548);
+            btn_Transferencia.Margin = new Padding(3, 2, 3, 2);
+            btn_Transferencia.Name = "btn_Transferencia";
+            btn_Transferencia.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btn_Transferencia.Size = new Size(326, 69);
+            btn_Transferencia.TabIndex = 6;
+            btn_Transferencia.Text = "TRANSFERENCIA";
             // 
             // guna2Panel5
             // 
@@ -268,30 +270,31 @@
             label1.Text = "FORMA DE PAGO";
             label1.Click += label1_Click;
             // 
-            // guna2Button6
+            // btn_Salir
             // 
-            guna2Button6.BorderColor = Color.Tomato;
-            guna2Button6.BorderRadius = 15;
-            guna2Button6.BorderThickness = 3;
-            guna2Button6.CustomizableEdges = customizableEdges16;
-            guna2Button6.DisabledState.BorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna2Button6.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna2Button6.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna2Button6.FillColor = Color.FromArgb(255, 192, 128);
-            guna2Button6.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2Button6.ForeColor = Color.White;
-            guna2Button6.Image = (Image)resources.GetObject("guna2Button6.Image");
-            guna2Button6.ImageAlign = HorizontalAlignment.Left;
-            guna2Button6.ImageOffset = new Point(25, 0);
-            guna2Button6.ImageSize = new Size(40, 40);
-            guna2Button6.Location = new Point(3, 622);
-            guna2Button6.Margin = new Padding(3, 2, 3, 2);
-            guna2Button6.Name = "guna2Button6";
-            guna2Button6.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            guna2Button6.Size = new Size(326, 69);
-            guna2Button6.TabIndex = 11;
-            guna2Button6.Text = "CANCELAR (ESC)";
+            btn_Salir.BorderColor = Color.Tomato;
+            btn_Salir.BorderRadius = 15;
+            btn_Salir.BorderThickness = 3;
+            btn_Salir.CustomizableEdges = customizableEdges16;
+            btn_Salir.DisabledState.BorderColor = Color.DarkGray;
+            btn_Salir.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Salir.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Salir.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Salir.FillColor = Color.FromArgb(255, 192, 128);
+            btn_Salir.Font = new Font("Segoe UI Black", 7F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn_Salir.ForeColor = Color.White;
+            btn_Salir.Image = (Image)resources.GetObject("btn_Salir.Image");
+            btn_Salir.ImageAlign = HorizontalAlignment.Left;
+            btn_Salir.ImageOffset = new Point(25, 0);
+            btn_Salir.ImageSize = new Size(40, 40);
+            btn_Salir.Location = new Point(3, 622);
+            btn_Salir.Margin = new Padding(3, 2, 3, 2);
+            btn_Salir.Name = "btn_Salir";
+            btn_Salir.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            btn_Salir.Size = new Size(326, 69);
+            btn_Salir.TabIndex = 11;
+            btn_Salir.Text = "CANCELAR (ESC)";
+            btn_Salir.Click += btn_Salir_Click;
             // 
             // tableLayoutPanel1
             // 
@@ -316,6 +319,8 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 35.1851845F));
             tableLayoutPanel2.Controls.Add(label3, 0, 1);
             tableLayoutPanel2.Controls.Add(label2, 0, 0);
+            tableLayoutPanel2.Controls.Add(lbl_Monto, 1, 1);
+            tableLayoutPanel2.Controls.Add(lbl_Tipo, 1, 0);
             tableLayoutPanel2.Location = new Point(3, 61);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
@@ -348,6 +353,26 @@
             label2.Text = "Tipo de Vehículo:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // lbl_Monto
+            // 
+            lbl_Monto.AutoSize = true;
+            lbl_Monto.Location = new Point(212, 50);
+            lbl_Monto.Name = "lbl_Monto";
+            lbl_Monto.Size = new Size(38, 15);
+            lbl_Monto.TabIndex = 16;
+            lbl_Monto.Text = "label5";
+            lbl_Monto.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lbl_Tipo
+            // 
+            lbl_Tipo.AutoSize = true;
+            lbl_Tipo.Location = new Point(212, 0);
+            lbl_Tipo.Name = "lbl_Tipo";
+            lbl_Tipo.Size = new Size(38, 15);
+            lbl_Tipo.TabIndex = 15;
+            lbl_Tipo.Text = "label4";
+            lbl_Tipo.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frm_fpago
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -355,14 +380,14 @@
             ClientSize = new Size(330, 714);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
-            Controls.Add(guna2Button6);
+            Controls.Add(btn_Salir);
             Controls.Add(guna2Panel5);
-            Controls.Add(guna2Button5);
-            Controls.Add(guna2Button4);
-            Controls.Add(guna2Button3);
-            Controls.Add(guna2Button2);
-            Controls.Add(guna2Button1);
-            Controls.Add(guna2Button11);
+            Controls.Add(btn_Transferencia);
+            Controls.Add(btn_Incompleto);
+            Controls.Add(btn_Prepagado);
+            Controls.Add(btn_POS);
+            Controls.Add(btn_Efectivo);
+            Controls.Add(btn_Exonerado);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "frm_fpago";
@@ -378,20 +403,22 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button11;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btn_Exonerado;
+        private Guna.UI2.WinForms.Guna2Button btn_Efectivo;
+        private Guna.UI2.WinForms.Guna2Button btn_POS;
+        private Guna.UI2.WinForms.Guna2Button btn_Prepagado;
+        private Guna.UI2.WinForms.Guna2Button btn_Incompleto;
+        private Guna.UI2.WinForms.Guna2Button btn_Transferencia;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button btn_Salir;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel2;
         private Label label3;
         private Label label2;
+        private Label lbl_Monto;
+        private Label lbl_Tipo;
     }
 }
