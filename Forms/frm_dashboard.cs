@@ -139,6 +139,10 @@ namespace ArcorpExpress
 
         private void OpenfPago(string varTipo, int varMonto)
         {
+            if (FormularioHelper.FormularioAbierto("frm_fpago"))
+            {
+                frm_Fpago.Close();
+            }
             // Abre formulario de forma de pago y pasa las variables obtenidas de API
             this.frm_Fpago = new frm_fpago(varTipo, varMonto);
             this.frm_Fpago.Show();
