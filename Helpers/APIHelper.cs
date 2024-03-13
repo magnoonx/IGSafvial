@@ -108,6 +108,59 @@ public static class APIHelper
             }
         }
         }
+
+
+    // Cambiar el cuerpo del método para obtener la forma de pago
+
+    public static async Task<Respuesta> FormaPago(string usuario, string password)
+    {
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string fileName = "Config/config.txt";
+            string filePath = Path.Combine(currentDirectory, fileName);
+            string url = File.ReadAllText(filePath);
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    // var url = "http://192.168.2.13:5000/api/User/Login/";
+
+
+                    var data = new { usuario = usuario, password = password };
+                    var loginmodel = new LoginModel
+
+                    {
+                        Password = password,
+                        UserName = usuario
+                    };
+                    string jsonData = JsonConvert.SerializeObject(loginmodel);
+                    var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
+                    // var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(content), Encoding.UTF8, "application/json"));
+                    var response = await client.PostAsync(url, content).ConfigureAwait(false);
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        var Content = await response.Content.ReadAsStringAsync();
+                        var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
+                        Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
+                        var token = myDeserializedClass.token;
+
+
+                        return new Respuesta { success = true };
+                    }
+                    else
+                    {
+                        return new Respuesta { success = false, message = "Login o Contraseña incorrectos, por favor verifique e intente nuevamente" };
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // MessageBox.Show("No se conecta");            
+                return new Respuesta { success = false, message = "No se puede conectar con la API" };
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
 }
 
 public class Respuesta
