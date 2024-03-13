@@ -73,7 +73,7 @@ public static class APIHelper
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 return new Respuesta { success = true };
-                // incluir la loogicaa para obtener la tarifa
+                // incluir la logica para obtener la tarifa
             }
             else
             {
