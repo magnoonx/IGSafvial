@@ -13,6 +13,7 @@ namespace ArcorpExpress.Forms
     public partial class frm_fpago : Form
     {
         private frm_procesopago frm_Procesopago;
+        private frm_exonerado frm_Exonerado;
         string vTipo;
         int vMonto;
         public frm_fpago(string varTipo, int varMonto)
@@ -23,6 +24,7 @@ namespace ArcorpExpress.Forms
             this.lbl_Tipo.Text = vTipo;
             this.lbl_Monto.Text = vMonto.ToString();
             this.frm_Procesopago = null;
+            this.frm_Exonerado = null;
         }
         private void frm_fpago_Load(object sender, EventArgs e)
         {
@@ -99,8 +101,13 @@ namespace ArcorpExpress.Forms
 
             this.Region = new System.Drawing.Region(gp);
         }
-       
 
+        private void btn_Exonerado_Click(object sender, EventArgs e)
+        {
+            this.frm_Exonerado = new frm_exonerado();   
+            
+            this.frm_Exonerado.Show();
+        }
     }
 
 
