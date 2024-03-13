@@ -200,56 +200,56 @@ namespace ArcorpExpress
             string varTipo;
             int varMonto;
 
-            switch (opcion)
+            switch (opcion)  // En todos los casos se debe llamar a la API y pasarle el tipo de vehiculo
             {
                 case 0:
-                     varTipo = "Venta Express";  // Reemplazar con el valor real otorgado por API
+                     varTipo = "Venta Express";  // Reemplazar con el valor real para enviar a API
                      varMonto = 3;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 1:
-                     varTipo = "Vehículo Liviano";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 5;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Vehículo Liviano";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 5;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 2:
-                     varTipo = "Microbus";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 10; // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Microbus"; // Reemplazar con el valor real para enviar a API
+                    varMonto = 10; // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 3:
-                     varTipo = "Autobus";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 15;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Autobus";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 15;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 4:
-                     varTipo = "Camion 350";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 20;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Camion 350";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 20;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 5:
-                     varTipo = "Camion 750";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 25;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Camion 750";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 25;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 6:
-                     varTipo = "Camion 3 Ejes";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 30;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Camion 3 Ejes";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 30;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 7:
-                     varTipo = "Camion 4 ejes";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 35;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Camion 4 ejes";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 35;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 8:
-                     varTipo = "Camion 5 Ejes";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 40;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Camion 5 Ejes";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 40;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 case 9:
-                     varTipo = "Camion 6 Ejes";  // Reemplazar con el valor real otorgado por API
-                     varMonto = 45;  // Quitar y ubicar en la respuesta obtenida de la API
+                     varTipo = "Camion 6 Ejes";  // Reemplazar con el valor real para enviar a API
+                    varMonto = 45;  // Quitar y ubicar en la respuesta obtenida de la API
                     this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
                     break;
                 default: break;
