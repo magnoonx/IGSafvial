@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-public class FormularioHelper
+public class FormularioHelper // verifica si existe un formulario especifico abierto
 {
     public static bool FormularioAbierto(string nombreFormulario)
     {
