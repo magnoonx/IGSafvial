@@ -233,7 +233,7 @@
             guna2Panel5.Margin = new Padding(3, 2, 3, 2);
             guna2Panel5.Name = "guna2Panel5";
             guna2Panel5.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2Panel5.Size = new Size(330, 19);
+            guna2Panel5.Size = new Size(329, 19);
             guna2Panel5.TabIndex = 8;
             // 
             // guna2HtmlLabel1
@@ -386,7 +386,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(330, 714);
+            ClientSize = new Size(329, 714);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(btn_Salir);
@@ -400,6 +400,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
             Name = "frm_fpago";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frm_fpago";
             guna2Panel5.ResumeLayout(false);
             guna2Panel5.PerformLayout();

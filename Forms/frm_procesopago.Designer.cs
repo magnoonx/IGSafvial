@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_procesopago));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -51,7 +51,7 @@
             guna2Button1.BorderColor = Color.Tomato;
             guna2Button1.BorderRadius = 15;
             guna2Button1.BorderThickness = 3;
-            guna2Button1.CustomizableEdges = customizableEdges6;
+            guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -64,7 +64,7 @@
             guna2Button1.ImageSize = new Size(40, 40);
             guna2Button1.Location = new Point(179, 185);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(170, 87);
             guna2Button1.TabIndex = 2;
             guna2Button1.Text = "PROCESAR";
@@ -75,7 +75,7 @@
             guna2Button2.BorderColor = Color.Tomato;
             guna2Button2.BorderRadius = 15;
             guna2Button2.BorderThickness = 3;
-            guna2Button2.CustomizableEdges = customizableEdges8;
+            guna2Button2.CustomizableEdges = customizableEdges3;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -88,7 +88,7 @@
             guna2Button2.ImageSize = new Size(40, 40);
             guna2Button2.Location = new Point(3, 185);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button2.Size = new Size(170, 87);
             guna2Button2.TabIndex = 3;
             guna2Button2.Text = "CANCELAR";
@@ -107,7 +107,7 @@
             guna2ImageButton1.Margin = new Padding(3, 2, 3, 2);
             guna2ImageButton1.Name = "guna2ImageButton1";
             guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2ImageButton1.Size = new Size(167, 50);
             guna2ImageButton1.TabIndex = 10;
             // 
@@ -128,7 +128,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 33.3333321F));
-            tableLayoutPanel1.Size = new Size(346, 163);
+            tableLayoutPanel1.Size = new Size(346, 168);
             tableLayoutPanel1.TabIndex = 11;
             // 
             // lbl_Monto
@@ -136,9 +136,9 @@
             lbl_Monto.AutoSize = true;
             lbl_Monto.Dock = DockStyle.Fill;
             lbl_Monto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_Monto.Location = new Point(176, 108);
+            lbl_Monto.Location = new Point(176, 112);
             lbl_Monto.Name = "lbl_Monto";
-            lbl_Monto.Size = new Size(167, 55);
+            lbl_Monto.Size = new Size(167, 56);
             lbl_Monto.TabIndex = 15;
             lbl_Monto.Text = "label5";
             lbl_Monto.TextAlign = ContentAlignment.MiddleCenter;
@@ -148,9 +148,9 @@
             label4.AutoSize = true;
             label4.Dock = DockStyle.Fill;
             label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(3, 108);
+            label4.Location = new Point(3, 112);
             label4.Name = "label4";
-            label4.Size = new Size(167, 55);
+            label4.Size = new Size(167, 56);
             label4.TabIndex = 14;
             label4.Text = "Monto a pagar:";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -160,9 +160,9 @@
             lbl_Tipo.AutoSize = true;
             lbl_Tipo.Dock = DockStyle.Fill;
             lbl_Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbl_Tipo.Location = new Point(176, 54);
+            lbl_Tipo.Location = new Point(176, 56);
             lbl_Tipo.Name = "lbl_Tipo";
-            lbl_Tipo.Size = new Size(167, 54);
+            lbl_Tipo.Size = new Size(167, 56);
             lbl_Tipo.TabIndex = 13;
             lbl_Tipo.Text = "label3";
             lbl_Tipo.TextAlign = ContentAlignment.MiddleCenter;
@@ -172,9 +172,9 @@
             label2.AutoSize = true;
             label2.Dock = DockStyle.Fill;
             label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(3, 54);
+            label2.Location = new Point(3, 56);
             label2.Name = "label2";
-            label2.Size = new Size(167, 54);
+            label2.Size = new Size(167, 56);
             label2.TabIndex = 12;
             label2.Text = "Tipo de Vehículo:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -186,7 +186,7 @@
             lbl_Forma.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_Forma.Location = new Point(176, 0);
             lbl_Forma.Name = "lbl_Forma";
-            lbl_Forma.Size = new Size(167, 54);
+            lbl_Forma.Size = new Size(167, 56);
             lbl_Forma.TabIndex = 11;
             lbl_Forma.Text = "label1";
             lbl_Forma.TextAlign = ContentAlignment.MiddleCenter;
@@ -201,6 +201,7 @@
             Controls.Add(guna2Button1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frm_procesopago";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frm_procesopago";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
