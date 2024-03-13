@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_procesopago));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -42,7 +42,7 @@
             label4 = new Label();
             lbl_Tipo = new Label();
             label2 = new Label();
-            label1 = new Label();
+            lbl_Forma = new Label();
             tableLayoutPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -51,7 +51,7 @@
             guna2Button1.BorderColor = Color.Tomato;
             guna2Button1.BorderRadius = 15;
             guna2Button1.BorderThickness = 3;
-            guna2Button1.CustomizableEdges = customizableEdges6;
+            guna2Button1.CustomizableEdges = customizableEdges1;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -64,7 +64,7 @@
             guna2Button1.ImageSize = new Size(40, 40);
             guna2Button1.Location = new Point(179, 185);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(170, 87);
             guna2Button1.TabIndex = 2;
             guna2Button1.Text = "PROCESAR";
@@ -75,7 +75,7 @@
             guna2Button2.BorderColor = Color.Tomato;
             guna2Button2.BorderRadius = 15;
             guna2Button2.BorderThickness = 3;
-            guna2Button2.CustomizableEdges = customizableEdges8;
+            guna2Button2.CustomizableEdges = customizableEdges3;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -88,11 +88,12 @@
             guna2Button2.ImageSize = new Size(40, 40);
             guna2Button2.Location = new Point(3, 185);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button2.Size = new Size(170, 87);
             guna2Button2.TabIndex = 3;
             guna2Button2.Text = "CANCELAR";
             guna2Button2.TextOffset = new Point(-10, 30);
+            guna2Button2.Click += guna2Button2_Click;
             // 
             // guna2ImageButton1
             // 
@@ -106,7 +107,7 @@
             guna2ImageButton1.Margin = new Padding(3, 2, 3, 2);
             guna2ImageButton1.Name = "guna2ImageButton1";
             guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
-            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges5;
             guna2ImageButton1.Size = new Size(167, 50);
             guna2ImageButton1.TabIndex = 10;
             // 
@@ -120,7 +121,7 @@
             tableLayoutPanel1.Controls.Add(lbl_Tipo, 1, 1);
             tableLayoutPanel1.Controls.Add(label2, 0, 1);
             tableLayoutPanel1.Controls.Add(guna2ImageButton1, 0, 0);
-            tableLayoutPanel1.Controls.Add(label1, 1, 0);
+            tableLayoutPanel1.Controls.Add(lbl_Forma, 1, 0);
             tableLayoutPanel1.Location = new Point(3, 3);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
@@ -176,16 +177,16 @@
             label2.Text = "Tipo de Vehículo:";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lbl_Forma
             // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Location = new Point(176, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(167, 54);
-            label1.TabIndex = 11;
-            label1.Text = "label1";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            lbl_Forma.AutoSize = true;
+            lbl_Forma.Dock = DockStyle.Fill;
+            lbl_Forma.Location = new Point(176, 0);
+            lbl_Forma.Name = "lbl_Forma";
+            lbl_Forma.Size = new Size(167, 54);
+            lbl_Forma.TabIndex = 11;
+            lbl_Forma.Text = "label1";
+            lbl_Forma.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // frm_procesopago
             // 
@@ -208,7 +209,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private TableLayoutPanel tableLayoutPanel1;
-        private Label label1;
+        private Label lbl_Forma;
         private Label lbl_Monto;
         private Label label4;
         private Label lbl_Tipo;
