@@ -19,4 +19,10 @@
         public int personId { get; set; }
         public required string userName { get; set; }
     }
+    public class TokenActual
+    {
+        public required string token { get; set; }
+
+    }
+
 }

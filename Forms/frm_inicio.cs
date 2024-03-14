@@ -1,4 +1,5 @@
 using ArcorpExpress;
+using ArcorpExpress.Models;
 
 namespace TestConexion
 {
@@ -38,9 +39,10 @@ namespace TestConexion
 
 			if (respuesta.success)
 			{
-				// Abrir el formulario de dashboard
-				var dashboard = new frm_dashboard();
-				dashboard.Show();
+
+				
+                //var dashboard = new frm_dashboard();
+				//dashboard.Show();
 				this.Hide();
 			}
 			else
@@ -68,9 +70,9 @@ namespace TestConexion
 
 			if (respuesta.success)
 			{
-				// Abrir el formulario de dashboard
-				var dashboard = new frm_dashboard();
-				dashboard.Show();
+                
+              //  var dashboard = new frm_dashboard();
+				//dashboard.Show();
 				this.Hide();
 			}
 			else
@@ -98,11 +100,15 @@ namespace TestConexion
 
 			// Llamada a la API
 			var respuesta = await APIHelper.Login(usuario, password);
-
-			if (respuesta.success)
+            string tokenActual = respuesta.Token;
+            if (respuesta.success)
 			{
+
 				// Abrir el formulario de dashboard
-				var dashboard = new frm_dashboard();
+				frm_dashboard dashboard = new frm_dashboard(tokenActual);
+                
+                // Abrir el formulario de dashboard
+                // var dashboard = new frm_dashboard();
 				dashboard.Show();
 				this.Hide();
 			}

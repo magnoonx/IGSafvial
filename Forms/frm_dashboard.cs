@@ -23,10 +23,11 @@ namespace ArcorpExpress
         private Point _offset;
         private Point _start_point = new Point();
 
-        public frm_dashboard()
+        public frm_dashboard(string tokenActual)
         {
             InitializeComponent();
             //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
             this.frm_Fpago = null;
         }
 
@@ -113,16 +114,16 @@ namespace ArcorpExpress
 
         private void guna2Button6_Click(object sender, EventArgs e)
         {
-            string varTipo = "Camion 750";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 25;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/5";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
         {
-            string varTipo = "Camion 4 ejes";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 35;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/7";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -132,74 +133,90 @@ namespace ArcorpExpress
 
         private void btn_VentaExpress_Click(object sender, EventArgs e)
         {
-            string varTipo = "Venta Express";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 3;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6WyJFTExJT1QiLCJST05ET04iLCJBZG1pbmlzdHJhZG9yIl0sIklEX1VzdWFyaW8iOiIyIiwibmJmIjoxNzEwNDUzMzEwLCJleHAiOjE3MTA0Njc3MTAsImlhdCI6MTcxMDQ1MzMxMH0.-qIfnAyXBPP_a9-_HR8KOgVTjjGJfSPROMsxqOimMeo";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/";  // Quitar y ubicar en la respuesta obtenida de la API
+            
+            
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
         }
 
-        private void OpenfPago(string varTipo, int varMonto)
+        private async void OpenfPago(string token, string apiURL)
         {
+            var respuesta = await APIHelper.Tarifa(token, apiURL);
+            
             if (FormularioHelper.FormularioAbierto("frm_fpago"))
             {
                 frm_Fpago.Close();
             }
             // Abre formulario de forma de pago y pasa las variables obtenidas de API
-            this.frm_Fpago = new frm_fpago(varTipo, varMonto);
-            this.frm_Fpago.Show();
+            
+
+            if (respuesta.success)
+            {
+                
+                MessageBox.Show("Success");
+            }
+            else
+            {
+                MessageBox.Show("Unsuccess");
+            }
+
+            //this.frm_Fpago = new frm_fpago(varTipo, varMonto);
+            //this.frm_Fpago.Show();
         }
 
         private void btn_Liviano_Click(object sender, EventArgs e)
         {
-            string varTipo = "Vehículo Liviano";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 5;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)       
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/1";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)       
         }
 
         private void btn_Microbus_Click(object sender, EventArgs e)
         {
-            string varTipo = "Microbus"; // Reemplazar con el valor real para enviar a API
-            int varMonto = 10; // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)        
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/2";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
 
         }
 
         private void btn_Autobus_Click(object sender, EventArgs e)
         {
-           string varTipo = "Autobus";  // Reemplazar con el valor real para enviar a API
-           int varMonto = 15;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)   
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/3";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
 
         }
 
         private void btn_350_Click(object sender, EventArgs e)
         {
-            string varTipo = "Camion 350";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 20;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)         
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/4";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)        
 
         }
 
         private void btn_3ejes_Click(object sender, EventArgs e)
         {
-            string varTipo = "Camion 3 Ejes";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 30;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)         
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/6";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)            
 
         }
 
         private void btn_5ejes_Click(object sender, EventArgs e)
         {
-            string varTipo = "Camion 5 Ejes";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 40;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)   
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/8";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
 
         }
 
         private void btn_6ejes_Click(object sender, EventArgs e)
         {
-            string varTipo = "Camion 6 Ejes";  // Reemplazar con el valor real para enviar a API
-            int varMonto = 45;  // Quitar y ubicar en la respuesta obtenida de la API
-            this.OpenfPago(varTipo, varMonto); // quitar y ubicar en la llamada a la API (CallAPI)
+            string Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkdWFydGUiLCJVc2VySWQiOiI0IiwibmJmIjoxNzEwNDIyMjA2LCJleHAiOjE3MTA0MzY2MDYsImlhdCI6MTcxMDQyMjIwNn0.VkXUv0NY-O2rGTdFr61ruHwl5NXBJIBv6xwvAqB3l6s";  // Reemplazar con el valor real para enviar a API
+            string apiURL = "http://192.168.2.13:5000/api/TipoVehiculo/9";  // Quitar y ubicar en la respuesta obtenida de la API
+            this.OpenfPago(Token, apiURL); // quitar y ubicar en la llamada a la API (CallAPI)    
         }
 
         protected override void OnPaint(PaintEventArgs e)

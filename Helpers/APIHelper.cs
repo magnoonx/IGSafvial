@@ -36,12 +36,10 @@ public static class APIHelper
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     var Content = await response.Content.ReadAsStringAsync();
-                    var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
+                    // var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
                     Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
-                    var token = myDeserializedClass.token;
-
-
-                    return new Respuesta { success = true };
+                    var token = myDeserializedClass.token;                    
+                    return new Respuesta { success = true, Token = token };                    
                 }
                 else
                 {
@@ -72,6 +70,8 @@ public static class APIHelper
 
             if (response.StatusCode == HttpStatusCode.OK)
             {
+                string Content = await response.Content.ReadAsStringAsync();
+                MessageBox.Show(Content);
                 return new Respuesta { success = true };
                 // incluir la logica para obtener la tarifa
             }
@@ -85,7 +85,7 @@ public static class APIHelper
     }
 
 
-    // Cambiar el cuerpo del método para obtener la forma de pago
+    // Cuerpo del método para obtener la forma de pago
 
     public static async Task<Respuesta> FormaPago(string token, string apiUrl)
     {
@@ -114,4 +114,6 @@ public class Respuesta
 {
     public bool success { get; set; }
     public string message { get; set; }
+
+    public string Token { get; set; }
 }
