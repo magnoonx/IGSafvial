@@ -158,7 +158,7 @@
             // guna2Panel1
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            guna2Panel1.BackColor = Color.WhiteSmoke;
+            guna2Panel1.BackColor = Color.White;
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.Location = new Point(-1, 53);
             guna2Panel1.Name = "guna2Panel1";
@@ -271,7 +271,7 @@
             // tableLayoutPanel2
             // 
             tableLayoutPanel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            tableLayoutPanel2.BackColor = Color.WhiteSmoke;
+            tableLayoutPanel2.BackColor = Color.White;
             tableLayoutPanel2.ColumnCount = 1;
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel2.Controls.Add(guna2TextBox5, 0, 1);
@@ -1014,7 +1014,7 @@
             // guna2Panel8
             // 
             guna2Panel8.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Panel8.BackColor = Color.WhiteSmoke;
+            guna2Panel8.BackColor = Color.White;
             guna2Panel8.Controls.Add(guna2PictureBox2);
             guna2Panel8.CustomizableEdges = customizableEdges67;
             guna2Panel8.Location = new Point(154, 53);

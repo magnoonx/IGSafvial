@@ -387,6 +387,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(329, 714);
             Controls.Add(tableLayoutPanel2);
             Controls.Add(tableLayoutPanel1);
