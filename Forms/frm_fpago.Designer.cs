@@ -92,6 +92,7 @@
             btn_Exonerado.Size = new Size(326, 69);
             btn_Exonerado.TabIndex = 1;
             btn_Exonerado.Text = "EXONERADO";
+            btn_Exonerado.Click += btn_Exonerado_Click;
             // 
             // btn_Efectivo
             // 
