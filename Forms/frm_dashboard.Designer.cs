@@ -1055,6 +1055,7 @@
             Name = "frm_dashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            WindowState = FormWindowState.Maximized;
             guna2Panel2.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
