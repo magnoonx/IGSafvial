@@ -88,7 +88,7 @@ public static class APIHelper
                             break; // Al encontrarlo, guardo la tarifa y salgo
                         }
                     }
-                }                    
+                }                
                             
                                
                 return new Respuesta { success = true, Tarifa = tarifaCorrespondiente };
@@ -98,15 +98,8 @@ public static class APIHelper
             {
                 throw new HttpRequestException("Error al hacer la solicitud: " + response.ReasonPhrase);
             }
-
-
         }
-    }
-
-
-    // Cuerpo del método para obtener la forma de pago
-
-   
+    }    
 }
 
 public class Respuesta
