@@ -35,7 +35,9 @@ public static class APIHelper
                     // var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
                     Root? myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
                     var token = myDeserializedClass.token;
-                    return new Respuesta { success = true, Token = token };
+                    var nombre = myDeserializedClass.user.nombre;
+                    var apellido = myDeserializedClass.user.apellido;
+                    return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido };
                 }
                 else
                 {
@@ -82,6 +84,10 @@ public class Respuesta
         public bool success { get; set; }
         public string message { get; set; }
         public string Token { get; set; }
+
+    public string Name { get; set; }
+
+    public string surName { get; set; }
        
     }
 

@@ -101,11 +101,13 @@ namespace TestConexion
 			// Llamada a la API
 			var respuesta = await APIHelper.Login(usuario, password);
             string tokenActual = respuesta.Token;
+			string nombreActual = respuesta.Name;
+			string SurName = respuesta.surName;
             if (respuesta.success)
 			{
 
 				// Abrir el formulario de dashboard
-				frm_dashboard dashboard = new frm_dashboard(tokenActual);
+				frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName);
                 
                 // Abrir el formulario de dashboard
                 // var dashboard = new frm_dashboard();

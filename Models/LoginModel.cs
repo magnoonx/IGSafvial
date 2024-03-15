@@ -16,33 +16,15 @@ namespace ArcorpExpress.Models
 
     public class User
     {
-        public int id { get; set; }
-        public int rolId { get; set; }
-        public int personId { get; set; }
-        public required string userName { get; set; }
-    }
-
-
-    public class tarfActual
-    {
-        public List<long> id { get; set; }
-        public List<string> nombre { get; set; }
-        public List<string> tarifa { get; set; }
-        public List<string> fechaVigencia { get; set; }
-        public List<string> disabled { get; set; }
-
-    }
-
-    public class trfActual
-    {
-        public long id { get; set; }
+        public int iD_Usuario { get; set; }
+        public string perfil { get; set; }
         public string nombre { get; set; }
-        public string tarifa { get; set; }
-        public string fechaVigencia { get; set; }
-        public string disabled { get; set; }
-
-
+        public  string apellido { get; set; }
     }
+
+
+    
+      
 
     public class tfActual
     {       
