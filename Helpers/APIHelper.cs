@@ -51,7 +51,7 @@ public static class APIHelper
         {
             // MessageBox.Show("No se conecta");            
             return new Respuesta { success = false, message = "No se puede conectar con la API" };
-            Console.WriteLine(ex.Message);
+            
         }
     }
 
@@ -93,7 +93,7 @@ public static class APIHelper
                             
                                
                 return new Respuesta { success = true, Tarifa = tarifaCorrespondiente };
-                // incluir la logica para obtener la tarifa
+               
             }
             else
             {
@@ -107,27 +107,7 @@ public static class APIHelper
 
     // Cuerpo del método para obtener la forma de pago
 
-    public static async Task<Respuesta> FormaPago(string token, string apiUrl)
-    {
-        using (HttpClient client = new HttpClient())
-        {
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-            HttpResponseMessage response = await client.GetAsync(apiUrl);
-
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                return new Respuesta { success = true };
-                // incluir la logica para obtener la forma de pago
-            }
-            else
-            {
-                throw new HttpRequestException("Error al hacer la solicitud: " + response.ReasonPhrase);
-            }
-
-
-        }
-    }
+   
 }
 
 public class Respuesta

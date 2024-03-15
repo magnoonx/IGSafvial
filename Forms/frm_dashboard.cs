@@ -116,21 +116,15 @@ namespace ArcorpExpress
         }
 
         private void guna2Button6_Click(object sender, EventArgs e)
-        {
-            string Token = tokenactual;
-            string Nombre = "2 Ejes";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)    
+        {            
+            string Nombre = "2 Ejes"; 
+            this.OpenfPago(Nombre);  
         }
 
         private void guna2Button8_Click(object sender, EventArgs e)
-        {
-            string Token = tokenactual;
-            string Nombre = "4 Ejes";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)   
+        {            
+            string Nombre = "4 Ejes";  
+            this.OpenfPago(Nombre);    
         }
 
         private void guna2TextBox1_TextChanged(object sender, EventArgs e)
@@ -140,92 +134,85 @@ namespace ArcorpExpress
 
         private void btn_VentaExpress_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "Prepagada";  // Quitar y ubicar en la respuesta obtenida de la API
-            
-            
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)    
+            string Nombre = "Prepagada";     
+            this.OpenfPago(Nombre);    
         }
 
-        private async void OpenfPago(string Token, string Nombre)
+        private async void OpenfPago(string Nombre)
         {
+            string Token = tokenactual;
             var respuesta = await APIHelper.Tarifa(Token, Nombre);
-            
-            if (FormularioHelper.FormularioAbierto("frm_fpago"))
+            try
             {
-                frm_Fpago.Close();
+                if (respuesta.success) 
+                {
+                    if (FormularioHelper.FormularioAbierto("frm_fpago"))
+                    {
+                        frm_Fpago.Close();
+                    }
+
+                    // Abre formulario de forma de pago y pasa las variables obtenidas de API                
+                    this.frm_Fpago = new frm_fpago(Nombre, respuesta.Tarifa);
+                    this.frm_Fpago.Show();
+                }
             }
-            // Abre formulario de forma de pago y pasa las variables obtenidas de API                
-            this.frm_Fpago = new frm_fpago(Nombre, respuesta.Tarifa);
-            this.frm_Fpago.Show();
+            catch (Exception ex)
+            {
+                MessageBox.Show("No hay respuesta del servidor, intente más tarde", "Error de Conexión");
+            }
         }
 
         private void btn_Liviano_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "Liviano";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)       
+           
+            string Nombre = "Liviano";  
+            this.OpenfPago(Nombre);        
         }
 
         private void btn_Microbus_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "Microbus";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI) 
+           
+            string Nombre = "Microbus"; 
+            this.OpenfPago(Nombre);  
 
         }
 
         private void btn_Autobus_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "Autobus";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)    
+            
+            string Nombre = "Autobus";
+            this.OpenfPago(Nombre);    
 
         }
 
         private void btn_350_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "Carga Liviana";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)     
+            
+            string Nombre = "Carga Liviana"; 
+            this.OpenfPago(Nombre);     
 
         }
 
         private void btn_3ejes_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "3 Ejes";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI)              
+            
+            string Nombre = "3 Ejes"; 
+            this.OpenfPago(Nombre);               
 
         }
 
         private void btn_5ejes_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "5 Ejes";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI) 
-
+            
+            string Nombre = "5 Ejes";
+            this.OpenfPago(Nombre); 
         }
 
         private void btn_6ejes_Click(object sender, EventArgs e)
         {
-            string Token = tokenactual;
-            string Nombre = "6 Ejes o Mas";  // Quitar y ubicar en la respuesta obtenida de la API
-
-
-            this.OpenfPago(Token, Nombre); // quitar y ubicar en la llamada a la API (CallAPI) 
+            
+            string Nombre = "6 Ejes o Mas"; 
+            this.OpenfPago(Nombre); 
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -243,11 +230,7 @@ namespace ArcorpExpress
         }
 
 
-        // private async void CallAPI(string Tipo, string Tarifa)
-        // {
-        //     var respuesta = await APIHelper.Tarifa(Tipo, Tarifa);
-        //     this.OpenfPago(varTipo, varMonto);
-        // }
+       
 
 
     }
