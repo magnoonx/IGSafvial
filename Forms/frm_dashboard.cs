@@ -163,7 +163,7 @@ namespace ArcorpExpress
                     // Abre formulario de forma de pago y pasa las variables obtenidas de API
                     
                     if (Nombre == "Prepagada")
-                   {
+                    {
                        string NombreVenta = "Venta Express";
                        this.frm_Fpago = new frm_fpago(NombreVenta, TarifaBuscada.tarifa);
                        this.frm_Fpago.Show();
@@ -178,7 +178,7 @@ namespace ArcorpExpress
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No hay respuesta del servidor, intente más tarde", "Error de Conexión");
+                MessageBox.Show("La tarifa no es válida", "Error de Tarifa");
             }
         }
 

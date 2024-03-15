@@ -69,7 +69,7 @@ public static class APIHelper
             }
             else
             {
-                return ("No hay conexion, vuela a intentar");
+                return ("No hay conexion, vuelva a intentar");
             }
         }
     }    
