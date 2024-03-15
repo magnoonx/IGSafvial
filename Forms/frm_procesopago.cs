@@ -12,7 +12,7 @@ namespace ArcorpExpress.Forms
 {
     public partial class frm_procesopago : Form
     {
-        public frm_procesopago(string varTipo, int varMonto, string varForma)
+        public frm_procesopago(string varTipo, string varMonto, string varForma)
         {
             InitializeComponent();
             this.lbl_Forma.Text = varForma;

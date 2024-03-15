@@ -60,19 +60,39 @@ public static class APIHelper
 
     // Cuerpo del método para obtener la tarifa
 
-    public static async Task<Respuesta> Tarifa(string token, string apiUrl)
+    public static async Task<Respuesta> Tarifa(string Token, string Nombre)
     {
+        string currentDirectory = Directory.GetCurrentDirectory();
+        string fileName = "Config/configTarifa.txt";
+        string filePath = Path.Combine(currentDirectory, fileName);
+        string url = File.ReadAllText(filePath);
+
         using (HttpClient client = new HttpClient())
         {
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
-
-            HttpResponseMessage response = await client.GetAsync(apiUrl);
-
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+            HttpResponseMessage response = await client.GetAsync(url);
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 string Content = await response.Content.ReadAsStringAsync();
-                MessageBox.Show(Content);
-                return new Respuesta { success = true };
+                trfActual myDeserializedClass = JsonConvert.DeserializeObject<trfActual>(Content); //Convierto la respuesta en un json
+                
+                string nombreBuscado = Nombre;
+                string tarifaCorrespondiente = null;
+
+                if (myDeserializedClass != null && myDeserializedClass.nombre != null)
+                {
+                    foreach (var nombre in myDeserializedClass.nombre) //busco la tarifa, segun el nombre dado
+                    {
+                        if (nombre == nombreBuscado)
+                        {
+                            tarifaCorrespondiente = myDeserializedClass.tarifa.ToString();
+                            break; // Al encontrarlo, guardo la tarifa y salgo
+                        }
+                    }
+                }                    
+                            
+                               
+                return new Respuesta { success = true, Tarifa = tarifaCorrespondiente };
                 // incluir la logica para obtener la tarifa
             }
             else
@@ -116,4 +136,6 @@ public class Respuesta
     public string message { get; set; }
 
     public string Token { get; set; }
+
+    public string Tarifa { get; set; }
 }

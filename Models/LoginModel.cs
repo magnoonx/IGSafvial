@@ -25,4 +25,14 @@
 
     }
 
+    public class trfActual
+    { 
+        public required List<string> id { get; set;}
+        public required List<string> nombre { get; set; }
+        public required List<string> tarifa { get; set; }
+        public required List<string> fechaVigencia { get; set; }
+        public required List<string> disabled { get; set; }
+
+    }
+
 }

@@ -15,14 +15,14 @@ namespace ArcorpExpress.Forms
         private frm_procesopago frm_Procesopago;
         private frm_exonerado frm_Exonerado;
         string vTipo;
-        int vMonto;
-        public frm_fpago(string varTipo, int varMonto)
+        string vMonto;
+        public frm_fpago(string varTipo, string varMonto)
         {
             InitializeComponent();
             vTipo = varTipo;
             vMonto = varMonto;
             this.lbl_Tipo.Text = vTipo;
-            this.lbl_Monto.Text = vMonto.ToString();
+            this.lbl_Monto.Text = vMonto;
             this.frm_Procesopago = null;
             this.frm_Exonerado = null;
         }
@@ -39,7 +39,7 @@ namespace ArcorpExpress.Forms
         {
             this.Close();
         }
-        private void ProcesoPago(string varTipo, int varMonto, string varForma)
+        private void ProcesoPago(string varTipo, string varMonto, string varForma)
         {
             if (FormularioHelper.FormularioAbierto("frm_procesopago"))
             {
@@ -53,7 +53,7 @@ namespace ArcorpExpress.Forms
         {
             string varForma = "Efectivo";
             string vartipo = vTipo;
-            int varMonto = vMonto;
+            string varMonto = vMonto;
             this.ProcesoPago(vartipo, varMonto, varForma);
         }
 
@@ -61,7 +61,7 @@ namespace ArcorpExpress.Forms
         {
             string varForma = "Punto de Venta";
             string vartipo = vTipo;
-            int varMonto = vMonto;
+            string varMonto = vMonto;
             this.ProcesoPago(vartipo, varMonto, varForma);
         }
 
@@ -69,7 +69,7 @@ namespace ArcorpExpress.Forms
         {
             string varForma = "Saldo Prepagado";
             string vartipo = vTipo;
-            int varMonto = vMonto;
+            string varMonto = vMonto;
             this.ProcesoPago(vartipo, varMonto, varForma);
         }
 
@@ -77,7 +77,7 @@ namespace ArcorpExpress.Forms
         {
             string varForma = "Pago Incompleto";
             string vartipo = vTipo;
-            int varMonto = vMonto;
+            string varMonto = vMonto;
             this.ProcesoPago(vartipo, varMonto, varForma);
         }
 
@@ -85,7 +85,7 @@ namespace ArcorpExpress.Forms
         {
             string varForma = "Transferencia";
             string vartipo = vTipo;
-            int varMonto = vMonto;
+            string varMonto = vMonto;
             this.ProcesoPago(vartipo, varMonto, varForma);
         }
         protected override void OnPaint(PaintEventArgs e)
@@ -104,9 +104,10 @@ namespace ArcorpExpress.Forms
 
         private void btn_Exonerado_Click(object sender, EventArgs e)
         {
-            this.frm_Exonerado = new frm_exonerado();   
-            
-            this.frm_Exonerado.Show();
+            string varForma = "Exonerado";
+            string vartipo = vTipo;
+            string varMonto = vMonto;
+            this.ProcesoPago(vartipo, varMonto, varForma);
         }
     }
 
