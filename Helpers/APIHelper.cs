@@ -66,7 +66,6 @@ public static class APIHelper
         string fileName = "Config/configTarifa.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
         string url = File.ReadAllText(filePath);
-
         using (HttpClient client = new HttpClient())
         {
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
