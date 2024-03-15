@@ -73,11 +73,9 @@ public static class APIHelper
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 string Content = await response.Content.ReadAsStringAsync();
-                trfActual myDeserializedClass = JsonConvert.DeserializeObject<trfActual>(Content); //Convierto la respuesta en un json
-                
+                trfActual myDeserializedClass = JsonConvert.DeserializeObject<trfActual>(Content); //Convierto la respuesta en un json                
                 string nombreBuscado = Nombre;
-                string tarifaCorrespondiente = null;
-
+                string? tarifaCorrespondiente = null;
                 if (myDeserializedClass != null && myDeserializedClass.nombre != null)
                 {
                     foreach (var nombre in myDeserializedClass.nombre) //busco la tarifa, segun el nombre dado
