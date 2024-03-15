@@ -1,0 +1,15 @@
+﻿tfActual;tfActual.id;tfActual.nombre;tfActual.tarifa;tfActual.fechaVigencia;tfActual.disabled
+ArcorpExpress.Models.tfActual;29;Liviano;15.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;30;Microbus;15.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;31;Autobus;20.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;32;"Carga Liviana";100.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;33;"2 Ejes";120.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;34;"3 Ejes";130.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;35;"4 Ejes";140.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;36;"5 Ejes";170.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;37;"6 Ejes o Mas";200.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;38;Exonerados;0.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;39;Prepagada;35.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;40;TarjetaPromo;0.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;41;PrepagadaPromo;35.0000;"08/15/2023 00:00:00";false
+ArcorpExpress.Models.tfActual;42;Promo;0.0000;"08/15/2023 00:00:00";false

@@ -21,7 +21,7 @@ namespace ArcorpExpress.Forms
             InitializeComponent();
             vTipo = varTipo;
             vMonto = varMonto;
-            this.lbl_Tipo.Text = vTipo;
+            this.lbl_Tipo.Text = vTipo.ToString();
             this.lbl_Monto.Text = vMonto;
             this.frm_Procesopago = null;
             this.frm_Exonerado = null;

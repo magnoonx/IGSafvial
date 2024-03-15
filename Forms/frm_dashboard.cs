@@ -1,5 +1,6 @@
 ﻿using ArcorpExpress.Forms;
 using ArcorpExpress.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
 
 
@@ -20,6 +22,7 @@ namespace ArcorpExpress
     public partial class frm_dashboard : Form
     {
         string tokenactual;
+        string JSesperado;
         private frm_fpago frm_Fpago;
         private bool _dragging = false;
         private Point _offset;
@@ -28,15 +31,20 @@ namespace ArcorpExpress
         public frm_dashboard(string tokenActual)
         {
             tokenactual = tokenActual;
-            InitializeComponent();
-            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            
+            InitializeComponent();            
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;            
             this.frm_Fpago = null;
         }
 
+        private async void frm_dashboard_Load(object sender, EventArgs e)
+        {
+            string Token = tokenactual;
+            var respuesta = await APIHelper.Dash(Token);
+            JSesperado = respuesta.ToString();            
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Mensaje Prueba");
         }
 
 
@@ -134,26 +142,38 @@ namespace ArcorpExpress
 
         private void btn_VentaExpress_Click(object sender, EventArgs e)
         {
-            string Nombre = "Prepagada";     
+            string Nombre = "Prepagada";
+           
             this.OpenfPago(Nombre);    
         }
 
         private async void OpenfPago(string Nombre)
         {
-            string Token = tokenactual;
-            var respuesta = await APIHelper.Tarifa(Token, Nombre);
+            List<tfActual> tarifas = JsonConvert.DeserializeObject<List<tfActual>>(JSesperado);            
+            tfActual TarifaBuscada = tarifas.Find(r => r.nombre == Nombre);           
             try
-            {
-                if (respuesta.success) 
-                {
+           {
+               if (tarifas != null) 
+               {
                     if (FormularioHelper.FormularioAbierto("frm_fpago"))
-                    {
-                        frm_Fpago.Close();
-                    }
+                   {
+                       frm_Fpago.Close();
+                   }
 
-                    // Abre formulario de forma de pago y pasa las variables obtenidas de API                
-                    this.frm_Fpago = new frm_fpago(Nombre, respuesta.Tarifa);
-                    this.frm_Fpago.Show();
+                    // Abre formulario de forma de pago y pasa las variables obtenidas de API
+                    
+                    if (Nombre == "Prepagada")
+                   {
+                       string NombreVenta = "Venta Express";
+                       this.frm_Fpago = new frm_fpago(NombreVenta, TarifaBuscada.tarifa);
+                       this.frm_Fpago.Show();
+                    }
+                    else
+                    {
+                        this.frm_Fpago = new frm_fpago(Nombre, TarifaBuscada.tarifa);
+                        this.frm_Fpago.Show();
+                    }
+                    
                 }
             }
             catch (Exception ex)

@@ -9,6 +9,7 @@ using System.Text;
 
 public static class APIHelper
 {
+    public static string JsonData;
     public static async Task<Respuesta> Login(string usuario, string password)
     {
         string currentDirectory = Directory.GetCurrentDirectory();
@@ -18,25 +19,23 @@ public static class APIHelper
         try
         {
             using (var client = new HttpClient())
-            {                
+            {
                 var data = new { usuario = usuario, password = password };
                 var loginmodel = new LoginModel
-
                 {
                     Password = password,
                     UserName = usuario
                 };
                 string jsonData = JsonConvert.SerializeObject(loginmodel);
-                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");
-                // var response = await client.PostAsync(url, new StringContent(JsonConvert.SerializeObject(content), Encoding.UTF8, "application/json"));
+                var content = new StringContent(jsonData, Encoding.UTF8, "application/json");               
                 var response = await client.PostAsync(url, content).ConfigureAwait(false);
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     var Content = await response.Content.ReadAsStringAsync();
                     // var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
                     Root? myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
-                    var token = myDeserializedClass.token;                    
-                    return new Respuesta { success = true, Token = token };                    
+                    var token = myDeserializedClass.token;
+                    return new Respuesta { success = true, Token = token };
                 }
                 else
                 {
@@ -45,13 +44,13 @@ public static class APIHelper
             }
         }
         catch (Exception ex)
-        {
-            // MessageBox.Show("No se conecta");            
-            return new Respuesta { success = false, message = "No se puede conectar con la API" };            
+        {                     
+            return new Respuesta { success = false, message = "No se puede conectar con la API" };
         }
     }
-    // Cuerpo del método para obtener la tarifa
-    public static async Task<Respuesta> Tarifa(string Token, string Nombre)
+    
+    // Cuerpo del método para conectar con el TipoVehiculo desde el dashboard
+    public static async Task<string> Dash(string Token)
     {
         string currentDirectory = Directory.GetCurrentDirectory();
         string fileName = "Config/configTarifa.txt";
@@ -63,35 +62,28 @@ public static class APIHelper
             HttpResponseMessage response = await client.GetAsync(url);
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                string Content = await response.Content.ReadAsStringAsync();
-                trfActual myDeserializedClass = JsonConvert.DeserializeObject<trfActual>(Content); //Convierto la respuesta en un json                
-                string nombreBuscado = Nombre;
-                string? tarifaCorrespondiente = null;
-                if (myDeserializedClass != null && myDeserializedClass.nombre != null)
-                {
-                    foreach (var nombre in myDeserializedClass.nombre) //busco la tarifa, segun el nombre dado
-                    {
-                        if (nombre == nombreBuscado)
-                        {
-                            tarifaCorrespondiente = myDeserializedClass.tarifa.ToString();
-                            break; // Al encontrarlo, guardo la tarifa y salgo
-                        }
-                    }
-                }                          
-                return new Respuesta { success = true, Tarifa = tarifaCorrespondiente };              
+                string Content = await response.Content.ReadAsStringAsync();                               
+                List<tfActual> myDeserializedClass = JsonConvert.DeserializeObject<List<tfActual>>(Content);        
+                JsonData = JsonConvert.SerializeObject(myDeserializedClass);
+                return (JsonData);                
             }
             else
             {
-                throw new HttpRequestException("Error al hacer la solicitud: " + response.ReasonPhrase);
+                return ("No hay conexion, vuela a intentar");
             }
         }
     }    
 }
 
+
+
 public class Respuesta
-{
-    public bool success { get; set; }
-    public string message { get; set; }
-    public string Token { get; set; }
-    public string Tarifa { get; set; }
-}
+    {
+        public bool success { get; set; }
+        public string message { get; set; }
+        public string Token { get; set; }
+       
+    }
+
+
+

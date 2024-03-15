@@ -918,7 +918,7 @@
             guna2HtmlLabel1.ForeColor = Color.DarkCyan;
             guna2HtmlLabel1.Location = new Point(446, 9);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(137, 17);
+            guna2HtmlLabel1.Size = new Size(172, 22);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "© Arcorp Express 2024";
             // 
@@ -1056,6 +1056,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
             WindowState = FormWindowState.Maximized;
+            Load += frm_dashboard_Load;
             guna2Panel2.ResumeLayout(false);
             guna2Panel3.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
