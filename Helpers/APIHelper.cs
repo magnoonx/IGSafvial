@@ -37,7 +37,7 @@ public static class APIHelper
                 {
                     var Content = await response.Content.ReadAsStringAsync();
                     // var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
-                    Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
+                    Root? myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
                     var token = myDeserializedClass.token;                    
                     return new Respuesta { success = true, Token = token };                    
                 }
