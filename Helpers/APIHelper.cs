@@ -18,10 +18,7 @@ public static class APIHelper
         try
         {
             using (var client = new HttpClient())
-            {
-                // var url = "http://192.168.2.13:5000/api/User/Login/";
-                
-               
+            {                
                 var data = new { usuario = usuario, password = password };
                 var loginmodel = new LoginModel
 
@@ -50,16 +47,10 @@ public static class APIHelper
         catch (Exception ex)
         {
             // MessageBox.Show("No se conecta");            
-            return new Respuesta { success = false, message = "No se puede conectar con la API" };
-            
+            return new Respuesta { success = false, message = "No se puede conectar con la API" };            
         }
     }
-
-   
-
-
     // Cuerpo del método para obtener la tarifa
-
     public static async Task<Respuesta> Tarifa(string Token, string Nombre)
     {
         string currentDirectory = Directory.GetCurrentDirectory();
@@ -86,11 +77,8 @@ public static class APIHelper
                             break; // Al encontrarlo, guardo la tarifa y salgo
                         }
                     }
-                }                
-                            
-                               
-                return new Respuesta { success = true, Tarifa = tarifaCorrespondiente };
-               
+                }                          
+                return new Respuesta { success = true, Tarifa = tarifaCorrespondiente };              
             }
             else
             {
@@ -104,8 +92,6 @@ public class Respuesta
 {
     public bool success { get; set; }
     public string message { get; set; }
-
     public string Token { get; set; }
-
     public string Tarifa { get; set; }
 }
