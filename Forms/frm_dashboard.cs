@@ -29,14 +29,14 @@ namespace ArcorpExpress
         private Point _offset;
         private Point _start_point = new Point();
 
-        public frm_dashboard(string tokenActual, string NombreActual, string apellido)
+        public frm_dashboard(string tokenActual, string nombre, string apellido, string perfil, int idusuario)
         {
             tokenactual = tokenActual;
             // nombreactual = NombreActual;
             InitializeComponent();            
             //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;            
             this.frm_Fpago = null;
-            this.txtUsuario.Text = "Usuario: " + NombreActual + " " + apellido;
+            this.txtUsuario.Text = "Usuario: " + nombre + " " + apellido;
         }
 
         private async void frm_dashboard_Load(object sender, EventArgs e)

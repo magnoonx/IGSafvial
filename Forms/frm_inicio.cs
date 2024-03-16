@@ -103,11 +103,13 @@ namespace TestConexion
             string tokenActual = respuesta.Token;
 			string nombreActual = respuesta.Name;
 			string SurName = respuesta.surName;
+			string Profile = respuesta.profile;
+			int IDuser = respuesta.iduser;
             if (respuesta.success)
 			{
 
 				// Abrir el formulario de dashboard
-				frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName);
+				frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName, Profile, IDuser);
                 
                 // Abrir el formulario de dashboard
                 // var dashboard = new frm_dashboard();
