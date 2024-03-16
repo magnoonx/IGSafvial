@@ -15,10 +15,11 @@ public static class APIHelper
         string currentDirectory = Directory.GetCurrentDirectory();
         string fileName = "Config/config.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
-        //string url = File.ReadAllText(filePath);
+        int lineNumber = 1;
+        string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault();
         try
         {
-            var url = "http://localhost:5000/api/Usuario/Login";
+          //  var url = "http://localhost:5000/api/Usuario/Login";
             using (var client = new HttpClient())
             {
                 var data = new { usuario = usuario, password = password };
@@ -58,7 +59,30 @@ public static class APIHelper
     public static async Task<string> Dash(string Token)
     {
         string currentDirectory = Directory.GetCurrentDirectory();
-        string fileName = "Config/configTarifa.txt";
+        string fileName = "Config/config.txt";
+        string filePath = Path.Combine(currentDirectory, fileName);
+        int lineNumber = 2;
+        string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault();
+        using (HttpClient client = new HttpClient())
+        {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+            HttpResponseMessage response = await client.GetAsync(url);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                string Content = await response.Content.ReadAsStringAsync();                               
+                return (Content);                
+            }
+            else
+            {
+                return ("No hay conexion, vuelva a intentar");
+            }
+        }
+    }
+    // Cuerpo del método para conectar con el Saldo Prepagado
+    public static async Task<string> SaldoPrepagado(string Token, string ID_cliente)
+    {
+        string currentDirectory = Directory.GetCurrentDirectory();
+        string fileName = "Config/configFPago.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
         string url = File.ReadAllText(filePath);
         using (HttpClient client = new HttpClient())
@@ -67,17 +91,18 @@ public static class APIHelper
             HttpResponseMessage response = await client.GetAsync(url);
             if (response.StatusCode == HttpStatusCode.OK)
             {
-                string Content = await response.Content.ReadAsStringAsync();                               
-               // List<tfActual> myDeserializedClass = JsonConvert.DeserializeObject<List<tfActual>>(Content);        
-               // JsonData = JsonConvert.SerializeObject(myDeserializedClass);
-                return (Content);                
+                var Content = await response.Content.ReadAsStringAsync();
+                List<saldoPrepagado> saldo = JsonConvert.DeserializeObject<List<saldoPrepagado>>(Content);
+                saldoPrepagado SaldoCliente = saldo.Find(r => r.iD_Cliente == ID_cliente);
+                return SaldoCliente.saldo;
             }
             else
             {
                 return ("No hay conexion, vuelva a intentar");
             }
         }
-    }    
+    }
+
 }
 
 
@@ -87,14 +112,10 @@ public class Respuesta
         public bool success { get; set; }
         public string message { get; set; }
         public string Token { get; set; }
-
-    public string Name { get; set; }
-
-    public string surName { get; set; }
-    public string profile { get; set; }
-    public int iduser { get; set; }  
-
-       
+        public string Name { get; set; }
+        public string surName { get; set; }
+        public string profile { get; set; }
+        public int iduser { get; set; }         
     }
 
 

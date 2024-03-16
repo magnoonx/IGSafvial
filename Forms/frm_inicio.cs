@@ -39,10 +39,7 @@ namespace TestConexion
 
 			if (respuesta.success)
 			{
-
-				
-                //var dashboard = new frm_dashboard();
-				//dashboard.Show();
+							
 				this.Hide();
 			}
 			else
@@ -70,10 +67,8 @@ namespace TestConexion
 
 			if (respuesta.success)
 			{
-                
-              //  var dashboard = new frm_dashboard();
-				//dashboard.Show();
-				this.Hide();
+             
+             this.Hide();
 			}
 			else
 			{
@@ -111,8 +106,7 @@ namespace TestConexion
 				// Abrir el formulario de dashboard
 				frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName, Profile, IDuser);
                 
-                // Abrir el formulario de dashboard
-                // var dashboard = new frm_dashboard();
+               
 				dashboard.Show();
 				this.Hide();
 			}
