@@ -92,30 +92,32 @@ namespace TestConexion
 		{
 			string usuario = guna2TextBox1.Text;
 			string password = guna2TextBox2.Text;
-
 			// Llamada a la API
-			var respuesta = await APIHelper.Login(usuario, password);
-            string tokenActual = respuesta.Token;
-			string nombreActual = respuesta.Name;
-			string SurName = respuesta.surName;
-			string Profile = respuesta.profile;
-			int IDuser = respuesta.iduser;
+			var respuesta = await APIHelper.Login(usuario, password);           
             if (respuesta.success)
 			{
-
-				// Abrir el formulario de dashboard
-				frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName, Profile, IDuser);
-                
-               
-				dashboard.Show();
-				this.Hide();
-			}
+                string tokenActual = respuesta.Token;
+                string nombreActual = respuesta.Name;
+                string SurName = respuesta.surName;
+                string Profile = respuesta.profile;
+                int IDuser = respuesta.iduser;
+					if (Profile == "Recaudador")
+					{
+						// Abrir el formulario de dashboard
+						frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName, Profile, IDuser);
+						dashboard.Show();
+						this.Hide();
+					}
+					else
+					{
+						MessageBox.Show("Usted no está autorizado a ingresar a éste módulo", "Error de Usuario", MessageBoxButtons.OK);
+					}
+            }
 			else
 			{
 				MessageBox.Show(respuesta.message, "Error de Inicio");
 			}
 		}
-
 		private void guna2ImageButton1_Click(object sender, EventArgs e)
 		{
 			Application.Exit();
