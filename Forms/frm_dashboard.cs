@@ -34,7 +34,7 @@ namespace ArcorpExpress
             tokenactual = tokenActual;
             // nombreactual = NombreActual;
             InitializeComponent();            
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;            
+            //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;            
             this.frm_Fpago = null;
             this.txtUsuario.Text = "Usuario: " + NombreActual + " " + apellido;
         }

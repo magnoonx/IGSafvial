@@ -15,9 +15,10 @@ public static class APIHelper
         string currentDirectory = Directory.GetCurrentDirectory();
         string fileName = "Config/config.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
-        string url = File.ReadAllText(filePath);
+        //string url = File.ReadAllText(filePath);
         try
         {
+            var url = "http://localhost:5000/api/Usuario/Login";
             using (var client = new HttpClient())
             {
                 var data = new { usuario = usuario, password = password };

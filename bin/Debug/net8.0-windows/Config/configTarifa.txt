@@ -1,1 +1,1 @@
-﻿http://192.168.2.13:5000/api/TipoVehiculo
+﻿http://localhost:5000/api/TipoVehiculoSap
