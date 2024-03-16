@@ -23,7 +23,7 @@ namespace ArcorpExpress
     {
         string tokenactual;
         string JSesperado;
-        string nombreactual;
+       // string nombreactual;
         private frm_fpago frm_Fpago;
         private bool _dragging = false;
         private Point _offset;
@@ -32,7 +32,7 @@ namespace ArcorpExpress
         public frm_dashboard(string tokenActual, string NombreActual, string apellido)
         {
             tokenactual = tokenActual;
-            nombreactual = NombreActual;
+            // nombreactual = NombreActual;
             InitializeComponent();            
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;            
             this.frm_Fpago = null;

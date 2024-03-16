@@ -9,7 +9,7 @@ using System.Text;
 
 public static class APIHelper
 {
-    public static string JsonData;
+   // public static string JsonData;
     public static async Task<Respuesta> Login(string usuario, string password)
     {
         string currentDirectory = Directory.GetCurrentDirectory();
@@ -65,9 +65,9 @@ public static class APIHelper
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 string Content = await response.Content.ReadAsStringAsync();                               
-                List<tfActual> myDeserializedClass = JsonConvert.DeserializeObject<List<tfActual>>(Content);        
-                JsonData = JsonConvert.SerializeObject(myDeserializedClass);
-                return (JsonData);                
+               // List<tfActual> myDeserializedClass = JsonConvert.DeserializeObject<List<tfActual>>(Content);        
+               // JsonData = JsonConvert.SerializeObject(myDeserializedClass);
+                return (Content);                
             }
             else
             {
