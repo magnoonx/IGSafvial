@@ -37,7 +37,9 @@ public static class APIHelper
                     var token = myDeserializedClass.token;
                     var nombre = myDeserializedClass.user.nombre;
                     var apellido = myDeserializedClass.user.apellido;
-                    return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido };
+                    var IDUsuario = myDeserializedClass.user.iD_Usuario;
+                    var perfil = myDeserializedClass.user.perfil;
+                    return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido, profile = perfil, iduser = IDUsuario };
                 }
                 else
                 {
@@ -88,6 +90,9 @@ public class Respuesta
     public string Name { get; set; }
 
     public string surName { get; set; }
+    public string profile { get; set; }
+    public int iduser { get; set; }  
+
        
     }
 

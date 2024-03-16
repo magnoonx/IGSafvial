@@ -310,7 +310,7 @@
             guna2TextBox5.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
             guna2TextBox5.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox5.Location = new Point(7, 184);
-            guna2TextBox5.Margin = new Padding(7, 7, 7, 7);
+            guna2TextBox5.Margin = new Padding(7);
             guna2TextBox5.Name = "guna2TextBox5";
             guna2TextBox5.PasswordChar = '\0';
             guna2TextBox5.PlaceholderText = "";
@@ -356,7 +356,7 @@
             guna2TextBox4.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
             guna2TextBox4.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox4.Location = new Point(7, 444);
-            guna2TextBox4.Margin = new Padding(7, 7, 7, 7);
+            guna2TextBox4.Margin = new Padding(7);
             guna2TextBox4.Name = "guna2TextBox4";
             guna2TextBox4.PasswordChar = '\0';
             guna2TextBox4.PlaceholderText = "";
@@ -384,7 +384,7 @@
             guna2TextBox2.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Location = new Point(7, 379);
-            guna2TextBox2.Margin = new Padding(7, 7, 7, 7);
+            guna2TextBox2.Margin = new Padding(7);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PasswordChar = '\0';
             guna2TextBox2.PlaceholderText = "";
@@ -411,7 +411,7 @@
             guna2TextBox3.Font = new Font("Segoe UI Black", 10F, FontStyle.Bold);
             guna2TextBox3.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox3.Location = new Point(7, 314);
-            guna2TextBox3.Margin = new Padding(7, 7, 7, 7);
+            guna2TextBox3.Margin = new Padding(7);
             guna2TextBox3.Name = "guna2TextBox3";
             guna2TextBox3.PasswordChar = '\0';
             guna2TextBox3.PlaceholderText = "";
@@ -918,7 +918,7 @@
             guna2HtmlLabel1.ForeColor = Color.DarkCyan;
             guna2HtmlLabel1.Location = new Point(446, 9);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(172, 22);
+            guna2HtmlLabel1.Size = new Size(137, 17);
             guna2HtmlLabel1.TabIndex = 0;
             guna2HtmlLabel1.Text = "© Arcorp Express 2024";
             // 

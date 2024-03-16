@@ -29,7 +29,7 @@ namespace ArcorpExpress
         private Point _offset;
         private Point _start_point = new Point();
 
-        public frm_dashboard(string tokenActual, string NombreActual, string apellido)
+        public frm_dashboard(string tokenActual, string NombreActual, string apellido, string Perfil, int idusuario)
         {
             tokenactual = tokenActual;
             // nombreactual = NombreActual;
