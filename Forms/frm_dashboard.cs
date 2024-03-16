@@ -31,12 +31,19 @@ namespace ArcorpExpress
 
         public frm_dashboard(string tokenActual, string nombre, string apellido, string perfil, int idusuario)
         {
-            tokenactual = tokenActual;
-            // nombreactual = NombreActual;
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string fileName = "Config/config.txt";
+            string filePath = Path.Combine(currentDirectory, fileName);
+            int lineaSede = 3;
+            int lineaCanal = 4;
+
+            tokenactual = tokenActual;           
             InitializeComponent();            
             //this.WindowState = System.Windows.Forms.FormWindowState.Maximized;            
             this.frm_Fpago = null;
             this.txtUsuario.Text = "Usuario: " + nombre + " " + apellido;
+            this.txtSede.Text = File.ReadLines(filePath).Skip(lineaSede - 1).FirstOrDefault();
+            this.txtCanal.Text = File.ReadLines(filePath).Skip(lineaCanal - 1).FirstOrDefault();
         }
 
         private async void frm_dashboard_Load(object sender, EventArgs e)
