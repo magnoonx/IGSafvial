@@ -36,5 +36,21 @@ namespace ArcorpExpress.Models
         public string nombre { get; set; }
         public string tarifa { get; set; }
      }
+
+    public class UsuarioEspecifico
+    { 
+        public string iD_Usuario { get; set; }
+        public string perfil { get; set; }
+        public string nickname {  get; set; }
+        public string contrasena { get; set;}
+        public string iD_Peaje { get; set; }
+        public string nombre { get; set; } 
+        public string apellido { get; set;}
+        public string estado { get; set; }
+        public string turno { get; set; }
+        public string canal { get; set; }
+        public string clave { get; set; }
+    
+    }
     
 }

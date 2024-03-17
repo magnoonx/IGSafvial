@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using TestConexion;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.DataFormats;
 
@@ -50,7 +51,15 @@ namespace ArcorpExpress
         {
             string Token = tokenactual;
             var respuesta = await APIHelper.Dash(Token);
-            JSesperado = respuesta.ToString();            
+            if (respuesta != null)
+            {
+                JSesperado = respuesta.ToString();
+            }
+            else
+            {
+                MessageBox.Show("No hay conexión con la API, por favor revise el archivo de configuración e intente nuevamente", "Se cerrará la aplicación", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                Application.Exit();                
+            }
         }
         private void Form1_Load(object sender, EventArgs e)
         {

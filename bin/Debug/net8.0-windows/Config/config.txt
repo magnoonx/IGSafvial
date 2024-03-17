@@ -1,4 +1,4 @@
-﻿http://192.168.2.13:5000/api/Usuario/Login/
-http://192.168.2.13:5000/api/TipoVehiculo
+﻿http://192.168.2.13:5000/api/
+http://192.168.2.13:5000/api/TipoVehiculoSAP
 Sede: Reda Building
 Canal: 1

@@ -16,7 +16,7 @@ public static class APIHelper
         string fileName = "Config/config.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
         int lineNumber = 1;
-        string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault();
+        string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault() + "Usuario/Login";
         try
         {
           //  var url = "http://localhost:5000/api/Usuario/Login";
@@ -36,12 +36,26 @@ public static class APIHelper
                     var Content = await response.Content.ReadAsStringAsync();
                     // var respuesta = JsonConvert.DeserializeObject<Respuesta>(Content);
                     Root? myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
-                    var token = myDeserializedClass.token;
-                    var nombre = myDeserializedClass.user.nombre;
-                    var apellido = myDeserializedClass.user.apellido;
-                    var IDUsuario = myDeserializedClass.user.iD_Usuario;
-                    var perfil = myDeserializedClass.user.perfil;
-                    return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido, profile = perfil, iduser = IDUsuario };
+                    var token = myDeserializedClass.token;                   
+                    int IDUsuario = myDeserializedClass.user.iD_Usuario;
+                    string urlNew = url + "/" + IDUsuario;
+                    var respuesta = await DatosUsuario(token, urlNew);  // Llamada a DatosUsuario
+                    if (respuesta != null)
+                    {
+                        UsuarioEspecifico? DatosUsuarioEspecifico = JsonConvert.DeserializeObject<UsuarioEspecifico>(respuesta);
+                        string perfil = DatosUsuarioEspecifico.perfil;
+                        string nombre = DatosUsuarioEspecifico.nombre;
+                        string apellido = DatosUsuarioEspecifico.apellido;
+                        var idpeaje = DatosUsuarioEspecifico.iD_Peaje;
+                        var canal = DatosUsuarioEspecifico.canal;
+                        var turno = DatosUsuarioEspecifico.turno;
+                        return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido, profile = perfil, iduser = IDUsuario };
+                    } 
+
+                    
+                   
+                   
+                    
                 }
                 else
                 {
@@ -54,7 +68,27 @@ public static class APIHelper
             return new Respuesta { success = false, message = "No se puede conectar con la API" };
         }
     }
-    
+    public static async Task<string> DatosUsuario(string token, string url)
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            HttpResponseMessage respuesta = await client.GetAsync(url);
+            if (respuesta.StatusCode == HttpStatusCode.OK)
+            {
+                string Contenido = await respuesta.Content.ReadAsStringAsync();
+                return Contenido;
+
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+    }
+
+
     // Cuerpo del método para conectar con el TipoVehiculo desde el dashboard
     public static async Task<string> Dash(string Token)
     {
@@ -63,20 +97,26 @@ public static class APIHelper
         string filePath = Path.Combine(currentDirectory, fileName);
         int lineNumber = 2;
         string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault();
-        using (HttpClient client = new HttpClient())
+       
         {
-            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
-            HttpResponseMessage response = await client.GetAsync(url);
-            if (response.StatusCode == HttpStatusCode.OK)
+            using (HttpClient client = new HttpClient())
             {
-                string Content = await response.Content.ReadAsStringAsync();                               
-                return (Content);                
-            }
-            else
-            {
-                return ("No hay conexion, vuelva a intentar");
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+                HttpResponseMessage response = await client.GetAsync(url);
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    string Content = await response.Content.ReadAsStringAsync();
+                    return (Content);
+                }
+                else
+                {
+                    return null;
+                }
             }
         }
+        
+        
+
     }
     // Cuerpo del método para conectar con el Saldo Prepagado
     public static async Task<string> SaldoPrepagado(string Token, string ID_cliente)
@@ -108,14 +148,16 @@ public static class APIHelper
 
 
 public class Respuesta
-    {
-        public bool success { get; set; }
-        public string message { get; set; }
-        public string Token { get; set; }
-        public string Name { get; set; }
-        public string surName { get; set; }
-        public string profile { get; set; }
-        public int iduser { get; set; }         
+{
+    public bool success { get; set; }
+    public string message { get; set; }
+    public string Token { get; set; }
+    public string Name { get; set; }
+    public string surName { get; set; }
+    public string profile { get; set; }
+    public int iduser { get; set; }
+
+    
     }
 
 

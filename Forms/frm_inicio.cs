@@ -110,7 +110,7 @@ namespace TestConexion
 					}
 					else
 					{
-						MessageBox.Show("Usted no está autorizado a ingresar a éste módulo", "Error de Usuario", MessageBoxButtons.OK);
+						MessageBox.Show("Hola, " + nombreActual +  ", no estás autorizado(a) a ingresar a éste módulo", "Error de Usuario", MessageBoxButtons.OK , MessageBoxIcon.Warning);
 					}
             }
 			else
