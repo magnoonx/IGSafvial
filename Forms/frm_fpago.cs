@@ -13,7 +13,7 @@ namespace ArcorpExpress.Forms
     public partial class frm_fpago : Form
     {
         private frm_procesopago frm_Procesopago;
-        private frm_exonerado frm_Exonerado;
+        private frm_procpagotransfer frm_ProcesoPagoTransfer;
         string vTipo;
         string vMonto;
         public frm_fpago(string varTipo, string varMonto)
@@ -24,7 +24,8 @@ namespace ArcorpExpress.Forms
             this.lbl_Tipo.Text = vTipo.ToString();
             this.lbl_Monto.Text = vMonto;
             this.frm_Procesopago = null;
-            this.frm_Exonerado = null;
+            //this.frm_Exonerado = null;
+            this.frm_ProcesoPagoTransfer = null;
         }
         private void frm_fpago_Load(object sender, EventArgs e)
         {
@@ -49,6 +50,15 @@ namespace ArcorpExpress.Forms
             this.frm_Procesopago.Show();
         }
 
+        private void ProcesoPagoTransfer(string varTipo, string varMonto, string varForma)
+        {
+            if (FormularioHelper.FormularioAbierto("frm_procpagotransfer"))
+            {
+                frm_ProcesoPagoTransfer.Close();
+            }
+            this.frm_ProcesoPagoTransfer = new frm_procpagotransfer(varTipo, varMonto, varForma);
+            this.frm_ProcesoPagoTransfer.Show();
+        }
         private void btn_Efectivo_Click(object sender, EventArgs e)
         {
             string varForma = "Efectivo";
@@ -86,7 +96,7 @@ namespace ArcorpExpress.Forms
             string varForma = "Transferencia";
             string vartipo = vTipo;
             string varMonto = vMonto;
-            this.ProcesoPago(vartipo, varMonto, varForma);
+            this.ProcesoPagoTransfer(vartipo, varMonto, varForma);
         }
         protected override void OnPaint(PaintEventArgs e)
         {

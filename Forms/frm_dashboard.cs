@@ -23,14 +23,14 @@ namespace ArcorpExpress
     public partial class frm_dashboard : Form
     {
         string tokenactual;
-        string JSesperado;
+        string? JSesperado;
        // string nombreactual;
         private frm_fpago frm_Fpago;
         private bool _dragging = false;
         private Point _offset;
         private Point _start_point = new Point();
 
-        public frm_dashboard(string tokenActual, string nombre, string apellido, string perfil, int idusuario)
+        public frm_dashboard(string tokenActual, string nombre, string apellido, string perfil, int idusuario, string idpeaje, string canal, string turno, string Estatus)
         {
             string currentDirectory = Directory.GetCurrentDirectory();
             string fileName = "Config/config.txt";
@@ -44,7 +44,10 @@ namespace ArcorpExpress
             this.frm_Fpago = null;
             this.txtUsuario.Text = "Usuario: " + nombre + " " + apellido;
             this.txtSede.Text = File.ReadLines(filePath).Skip(lineaSede - 1).FirstOrDefault();
-            this.txtCanal.Text = File.ReadLines(filePath).Skip(lineaCanal - 1).FirstOrDefault();
+            //this.txtCanal.Text = File.ReadLines(filePath).Skip(lineaCanal - 1).FirstOrDefault();
+            this.txtEstatus.Text = Estatus;
+            this.txtTurno.Text = turno;
+            this.txtCanal.Text = canal; 
         }
 
         private async void frm_dashboard_Load(object sender, EventArgs e)

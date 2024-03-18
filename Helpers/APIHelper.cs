@@ -16,7 +16,8 @@ public static class APIHelper
         string fileName = "Config/config.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
         int lineNumber = 1;
-        string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault() + "Usuario/Login";
+        string urlPrev = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault();
+        string url = urlPrev + "Usuario/Login/";
         try
         {
           //  var url = "http://localhost:5000/api/Usuario/Login";
@@ -38,24 +39,19 @@ public static class APIHelper
                     Root? myDeserializedClass = JsonConvert.DeserializeObject<Root>(Content);
                     var token = myDeserializedClass.token;                   
                     int IDUsuario = myDeserializedClass.user.iD_Usuario;
-                    string urlNew = url + "/" + IDUsuario;
+                    string urlNew = urlPrev + "Usuario/" + IDUsuario;
                     var respuesta = await DatosUsuario(token, urlNew);  // Llamada a DatosUsuario
-                    if (respuesta != null)
-                    {
-                        UsuarioEspecifico? DatosUsuarioEspecifico = JsonConvert.DeserializeObject<UsuarioEspecifico>(respuesta);
-                        string perfil = DatosUsuarioEspecifico.perfil;
-                        string nombre = DatosUsuarioEspecifico.nombre;
-                        string apellido = DatosUsuarioEspecifico.apellido;
-                        var idpeaje = DatosUsuarioEspecifico.iD_Peaje;
-                        var canal = DatosUsuarioEspecifico.canal;
-                        var turno = DatosUsuarioEspecifico.turno;
-                        return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido, profile = perfil, iduser = IDUsuario };
-                    } 
-
-                    
-                   
-                   
-                    
+                    UsuarioEspecifico? DatosUsuarioEspecifico = JsonConvert.DeserializeObject<UsuarioEspecifico>(respuesta);
+                    string perfil = DatosUsuarioEspecifico.perfil;
+                    string nombre = DatosUsuarioEspecifico.nombre;
+                    string apellido = DatosUsuarioEspecifico.apellido;
+                    var idpeaje = DatosUsuarioEspecifico.iD_Peaje;
+                    string canal = DatosUsuarioEspecifico.canal;
+                    var turno = DatosUsuarioEspecifico.turno;
+                    string estatus = DatosUsuarioEspecifico.estado;
+                    // MessageBox.Show(perfil + " " +  nombre + " " + apellido + " " + canal + "  " + turno + " " + estatus);
+                    return new Respuesta { success = true, Token = token, Name = nombre, surName = apellido, profile = perfil, iduser = IDUsuario, id_peaje = idpeaje, Canal = canal, Turno = turno, status = estatus };
+                                    
                 }
                 else
                 {
@@ -156,6 +152,16 @@ public class Respuesta
     public string surName { get; set; }
     public string profile { get; set; }
     public int iduser { get; set; }
+
+    public string id_peaje { get; set; }
+
+    public string Canal {  get; set; }
+
+    public string Turno { get; set; }
+
+    public string status { get; set; }
+
+
 
     
     }

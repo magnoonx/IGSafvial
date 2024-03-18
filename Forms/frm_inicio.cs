@@ -101,10 +101,14 @@ namespace TestConexion
                 string SurName = respuesta.surName;
                 string Profile = respuesta.profile;
                 int IDuser = respuesta.iduser;
+				string idpeaje = respuesta.id_peaje;
+				string canal = respuesta.Canal;
+				string turno = respuesta.Turno;
+				string Estatus = respuesta.status;
 					if (Profile == "Recaudador")
 					{
 						// Abrir el formulario de dashboard
-						frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName, Profile, IDuser);
+						frm_dashboard dashboard = new frm_dashboard(tokenActual, nombreActual, SurName, Profile, IDuser, idpeaje, canal, turno, Estatus);
 						dashboard.Show();
 						this.Hide();
 					}
