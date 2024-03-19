@@ -35,8 +35,8 @@ namespace ArcorpExpress
             string currentDirectory = Directory.GetCurrentDirectory();
             string fileName = "Config/config.txt";
             string filePath = Path.Combine(currentDirectory, fileName);
-            int lineaSede = 3;
-            int lineaCanal = 4;
+            int lineaSede = 2;
+            
 
             tokenactual = tokenActual;           
             InitializeComponent();            

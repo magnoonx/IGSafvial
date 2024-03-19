@@ -12,7 +12,7 @@ namespace ArcorpExpress.Forms
 {
     public partial class frm_exonerado : Form
     {
-        public frm_exonerado()
+        public frm_exonerado(string tipo, string monto)
         {
             InitializeComponent();
         }

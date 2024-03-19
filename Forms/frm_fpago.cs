@@ -14,6 +14,7 @@ namespace ArcorpExpress.Forms
     {
         private frm_procesopago frm_Procesopago;
         private frm_procpagotransfer frm_ProcesoPagoTransfer;
+        private frm_exonerado frm_Exonerado;
         string vTipo;
         string vMonto;
         public frm_fpago(string varTipo, string varMonto)
@@ -48,6 +49,16 @@ namespace ArcorpExpress.Forms
             }
             this.frm_Procesopago = new frm_procesopago(varTipo, varMonto, varForma);
             this.frm_Procesopago.Show();
+        }
+
+        private void Exonerado(string varTipo, string varMonto, string varForma)
+        {
+            if (FormularioHelper.FormularioAbierto("frm_exonerado"))
+            {
+                frm_Exonerado.Close();
+            }
+            this.frm_Exonerado = new frm_exonerado(varTipo, varMonto);
+            this.frm_Exonerado.Show();
         }
 
         private void ProcesoPagoTransfer(string varTipo, string varMonto, string varForma)
@@ -85,10 +96,12 @@ namespace ArcorpExpress.Forms
 
         private void btn_Incompleto_Click(object sender, EventArgs e)
         {
-            string varForma = "Pago Incompleto";
-            string vartipo = vTipo;
-            string varMonto = vMonto;
-            this.ProcesoPago(vartipo, varMonto, varForma);
+           // string varForma = "Pago Incompleto";
+          //  string vartipo = vTipo;
+          //  string varMonto = vMonto;
+           // this.ProcesoPago(vartipo, varMonto, varForma);
+           MessageBox.Show("Ésta opción no está disponible", "Opcion no disponible", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            btn_Incompleto.Enabled = false;
         }
 
         private void btn_Transferencia_Click(object sender, EventArgs e)
@@ -98,18 +111,38 @@ namespace ArcorpExpress.Forms
             string varMonto = vMonto;
             this.ProcesoPagoTransfer(vartipo, varMonto, varForma);
         }
-        protected override void OnPaint(PaintEventArgs e)
+        // protected override void OnPaint(PaintEventArgs e)
+        // {
+        //     base.OnPaint(e);
+        //     System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
+        //     int cornerRadius = 20; // Puedes ajustar este valor para cambiar el radio de los bordes redondeados
+
+        //     gp.AddArc(0, 0, cornerRadius * 2, cornerRadius * 2, 180, 90);
+        //     gp.AddArc(this.Width - cornerRadius * 2, 0, cornerRadius * 2, cornerRadius * 2, 270, 90);
+        //      gp.AddArc(this.Width - cornerRadius * 2, this.Height - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 0, 90);
+        //     gp.AddArc(0, this.Height - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 90, 90);
+
+        //      this.Region = new System.Drawing.Region(gp);
+        // }
+
+        private void frm_fpago_Paint(object sender, PaintEventArgs e)
         {
-            base.OnPaint(e);
-            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            int cornerRadius = 20; // Puedes ajustar este valor para cambiar el radio de los bordes redondeados
+            Graphics g = e.Graphics;
+            Pen pen = new Pen(Color.Black, 2); // Define un lápiz negro con un grosor de 2
 
-            gp.AddArc(0, 0, cornerRadius * 2, cornerRadius * 2, 180, 90);
-            gp.AddArc(this.Width - cornerRadius * 2, 0, cornerRadius * 2, cornerRadius * 2, 270, 90);
-            gp.AddArc(this.Width - cornerRadius * 2, this.Height - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 0, 90);
-            gp.AddArc(0, this.Height - cornerRadius * 2, cornerRadius * 2, cornerRadius * 2, 90, 90);
+            int borderWidth = 0; // Ancho del borde
 
-            this.Region = new System.Drawing.Region(gp);
+            // Dibuja el borde izquierdo
+            g.DrawLine(pen, 0, 0, 0, this.Height);
+
+            // Dibuja el borde derecho
+            g.DrawLine(pen, this.Width - borderWidth, 0, this.Width - borderWidth, this.Height);
+
+            // Dibuja el borde superior
+            g.DrawLine(pen, 0, 0, this.Width, 0);
+
+            // Dibuja el borde inferior
+            g.DrawLine(pen, 0, this.Height - borderWidth, this.Width, this.Height - borderWidth);
         }
 
         private void btn_Exonerado_Click(object sender, EventArgs e)
@@ -117,7 +150,7 @@ namespace ArcorpExpress.Forms
             string varForma = "Exonerado";
             string vartipo = vTipo;
             string varMonto = vMonto;
-            this.ProcesoPago(vartipo, varMonto, varForma);
+            this.Exonerado(vartipo, varMonto, varForma);
         }
     }
 

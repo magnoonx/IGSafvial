@@ -91,14 +91,14 @@ public static class APIHelper
         string currentDirectory = Directory.GetCurrentDirectory();
         string fileName = "Config/config.txt";
         string filePath = Path.Combine(currentDirectory, fileName);
-        int lineNumber = 2;
-        string url = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault();
+        int lineNumber = 1;
+        string urlTV = File.ReadLines(filePath).Skip(lineNumber - 1).FirstOrDefault() + "TipoVehiculoSAP";
        
         {
             using (HttpClient client = new HttpClient())
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
-                HttpResponseMessage response = await client.GetAsync(url);
+                HttpResponseMessage response = await client.GetAsync(urlTV);
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     string Content = await response.Content.ReadAsStringAsync();
